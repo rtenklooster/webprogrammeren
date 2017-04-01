@@ -24,12 +24,12 @@
         <label for="inputEmail" class="sr-only">E-mailadres</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="E-mailadres" required="" autofocus="">
         
-        <label for="inputPassword" class="sr-only">Wachtwoord</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Wachtwoord" required="">
+        <label for="inputWachtwoord" class="sr-only">Wachtwoord</label>
+        <input type="password" id="inputWachtwoord" class="form-control" placeholder="Wachtwoord" required="">
         
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" value="ingelogdBlijven">Ingelogd blijven
           </label>
         </div>
 
