@@ -4,19 +4,21 @@
 explode($_POST);
 
 function verify_logon($username, $password){
-  // Deze functie controleerd of een gebruiker kan worden geautenticeert.
-  // Resultaat is succes of failed, bij success het user ID in de sessie veriablele $user_id
+  // Deze functie controleert of een gebruiker kan worden geautenticeert.
+  // In ons project gebruiken wij het emailadres als username.
+  // We vragen het password op aan de hand van een ingevulde username
+
   // String speciale characters ivm. sql injecttion.
     $username = mysql_real_escape_string($username);
-    $password = mysql_real_escape_string($password);
 
   // Doe hier de SQL query en return het resultaat.
-  // Voorkeur: count(*) where username en password matchen.
+  $hashed_password = "";
 
-  if($result_count >= 1){
-      echo "success";
-  }else{
-      echo "failed";
+  if (password_verify($password, $hashed_password)) {
+    echo "success";
+  }
+  else {
+    echo "failed";
   }
 }
 
