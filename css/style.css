@@ -4,6 +4,11 @@
     max-width: 330px;
 }
 
+#loginForm {
+    padding: 15px;
+    min-width:300px;
+}
+
 .header {
     margin-bottom: 10px;
 }
