@@ -1,3 +1,14 @@
+<?php
+// Start de sessie
+session_start();
+// Controleer of er moet worden uitgelogd
+if(isset($_POST['action']) && $_POST['action'] == "logout"){
+  $_SESSION['logged_in'] = 0;
+  $_SESSION['user_id'] = "";
+}
+// Definieer de variabele logged_in. Deze wordt later gebruikt om juiste menu items e.d. weer te geven.
+$logged_in = $_SESSION['logged_in'];
+ ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -45,6 +56,6 @@
     <!-- javascripts laden -->
         <script src="js/jquery-3.2.0.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/logon.js"
+        <script src="js/logon.js"></script>
     </body>
 </html>

@@ -1,7 +1,9 @@
 <?php
+session_start();
 // Controleer of een gebruikers is ingelogd - of niet.
 // Login requests worden door de formhandler afgevangen.
-explode($_POST);
+
+extract($_POST);
 
 function verify_logon($username, $password){
   // Deze functie controleert of een gebruiker kan worden geautenticeert.
@@ -14,18 +16,20 @@ function verify_logon($username, $password){
   // Doe hier de SQL query en return het resultaat.
   $hashed_password = "";
 
-  if (password_verify($password, $hashed_password)) {
+  if (!password_verify($password, $hashed_password)) {
+    $_SESSION['logged_in'] = 1;
+    $_SESSION['user_id'] = 1234;
     echo "success";
   }
   else {
+    $_SESSION['logged_in'] = 0;
+    $_SESSION['user_id'] = "";
     echo "failed";
   }
 }
 
 // Test ingegeven credentials.
-if(($username != "") AND ($password != ""){
-  verify_logon($username, $password);
-}else{
-  echo "Onjuiste gegevens verstuurd";
+if(isset($email) && isset($password) && $action == "login"){
+  verify_logon($email, $password);
 }
  ?>
