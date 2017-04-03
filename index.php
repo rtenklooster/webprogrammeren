@@ -21,17 +21,21 @@
 
     <div class="container">
         <div class="row">
-            <?php include("parts/navigation.php"); ?>
 
-            <!-- welke pagina? -->
-            <?php
-            if (isset($_GET["page"])) {
-                $page = htmlspecialchars($_GET["page"]);
-                include("parts/{$page}.php");
-            } else {
-                include("parts/main.php");
-            }
-            ?>
+                <?php include("parts/navigation.php"); ?>
+
+                <!-- div voor de content -->
+                <div class="col-sm-9 main">
+                    <!-- welke pagina? -->
+                    <?php
+                    if (isset($_GET["page"])) {
+                        $page = htmlspecialchars($_GET["page"]);
+                        include("parts/{$page}.php");
+                    } else {
+                        include("parts/main.php");
+                    }
+                    ?>
+                </div>
 
         </div>
     </div>

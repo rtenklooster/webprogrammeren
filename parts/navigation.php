@@ -6,11 +6,7 @@
             </a>
             <a href="?page=menukaart" class="btn btn-default btn-lg btn-block" role="button">Menukaart</a>
             <a href="?page=bestellen" class="btn btn-default btn-lg btn-block" role="button">Bestellen</a>
-
-            <button type="button" class="btn btn-default btn-lg btn-block invisible">
-                placeholder
-            </button>
-
+            <a href="" class="btn btn-default btn-lg btn-block invisible" role="button">placeholder</a>
 
             <div class="btn-group btn-block">
                 <button type="button" class="btn btn-default btn-lg dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
