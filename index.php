@@ -22,7 +22,17 @@
     <div class="container">
         <div class="row">
             <?php include("parts/navigation.php"); ?>
-            <?php include("parts/main.php"); ?>
+
+            <!-- welke pagina? -->
+            <?php
+            if (isset($_GET["page"])) {
+                $page = htmlspecialchars($_GET["page"]);
+                include("parts/{$page}.php");
+            } else {
+                include("parts/main.php");
+            }
+            ?>
+
         </div>
     </div>
 
