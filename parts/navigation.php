@@ -4,7 +4,6 @@
             <a href="index.php" class="btn btn-default btn-lg btn-block" role="button">
                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
             </a>
-            <a href="?page=menukaart" class="btn btn-default btn-lg btn-block" role="button">Menukaart</a>
             <a href="?page=bestellen" class="btn btn-default btn-lg btn-block" role="button">Bestellen</a>
             <a href="" class="btn btn-default btn-lg btn-block invisible" role="button">placeholder</a>
 
