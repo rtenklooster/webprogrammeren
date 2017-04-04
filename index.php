@@ -7,7 +7,12 @@ if(isset($_POST['action']) && $_POST['action'] == "logout"){
   $_SESSION['user_id'] = "";
 }
 // Definieer de variabele logged_in. Deze wordt later gebruikt om juiste menu items e.d. weer te geven.
-$logged_in = $_SESSION['logged_in'];
+if(!isset($_SESSION['logged_in'])){
+  $_SESSION['logged_in'] = 0;
+  $logged_in = $_SESSION['logged_in'];
+}else{
+  $logged_in = $_SESSION['logged_in'];
+}
  ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
