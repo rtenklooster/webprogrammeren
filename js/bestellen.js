@@ -1,32 +1,27 @@
 jQuery(document).ready(function() {
     console.log("Bestellen.js loaded");
 
-    var waarde = Number($("input#product1").val());
+    $("button").click(function(event) {
+        // op welke knop is geklikt.
+        let clickedId = $(this).attr("id");
+        
+        if (clickedId.indexOf("min") != -1) {
+            let id = clickedId.substr(0, clickedId.indexOf("min"))
+            // console.log(id);
+            let amount = Number($("#" + id + "amount").val()) - 1;
+            if (amount>=0) {
+                $("#" + id + "amount").val(amount);
+            }
 
-    $("button#product1min").click(function() {
-        if(waarde > 0) {
-            console.log("click min");
-            $("input#product1").val(waarde - 1);
-            waarde -= 1;
+        } else if (clickedId.indexOf("plus") != -1) {
+            let id = clickedId.substr(0, clickedId.indexOf("plus"))
+            let amount = Number($("#" + id + "amount").val()) + 1;
+            $("#" + id + "amount").val(amount);
+
+        } else if (clickedId.indexOf("order") != -1) {
+            console.log("order");
         }
     });
-
-    // $("button#product1plus").click(function() {
-
-    //         console.log("click min");
-    //         $("input#product1").val(waarde + 1);
-    //         waarde += 1;
-
-    // });
-
-$("button").click(function(event) {
-   var clicked = $(this); // jQuery wrapper for clicked element
-    console.log($(this).attr("id"));
-    //    console.log(clicked);
-});
-
-
-
 });
 
 

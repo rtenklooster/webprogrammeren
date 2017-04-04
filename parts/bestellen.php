@@ -15,12 +15,12 @@
                 <button class="btn btn-danger" id="product1min" type="button"> - </button>
                 <button class="btn btn-primary" id="product1plus" type="button"> + </button>
               </span>
-              <input type="text" id="product1" class="form-control" placeholder=" 0 ">
+              <input type="text" id="product1amount" class="form-control" placeholder="0">
             </div>
           </div>
 
           <div class="col-lg-6">
-            <button class="btn btn-primary pull-right" id="button1order" type="button">€ 12,50</button>
+            <button class="btn btn-primary pull-right" id="product1order" type="button">€ 12,50</button>
           </div>
         </div><!-- /.row -->
 
