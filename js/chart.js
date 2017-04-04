@@ -10,7 +10,6 @@ function updateTotal(){
       url: "functions/get_chart.php",
       data: "action=getTotal",
       success : function(text){
-        console.log(text);
         $( "#totaalBedrag" ).text( "Winkelmandje: € "+text);
       }
   });
