@@ -20,7 +20,7 @@
           </div>
 
           <div class="col-lg-6">
-            <button class="btn btn-primary pull-right" type="button">Bestel</button>
+            <button class="btn btn-primary pull-right" id="button1order" type="button">€ 12,50</button>
           </div>
         </div><!-- /.row -->
 

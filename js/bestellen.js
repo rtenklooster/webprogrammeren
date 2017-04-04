@@ -21,7 +21,8 @@ jQuery(document).ready(function() {
 
 $("button").click(function(event) {
    var clicked = $(this); // jQuery wrapper for clicked element
-   console.log(clicked);
+    console.log($(this).attr("id"));
+    //    console.log(clicked);
 });
 
 
