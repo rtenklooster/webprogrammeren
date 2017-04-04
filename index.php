@@ -62,5 +62,6 @@ if(!isset($_SESSION['logged_in'])){
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/logon.js"></script>
+    <script src="js/chart.js"></script>
     </body>
 </html>
