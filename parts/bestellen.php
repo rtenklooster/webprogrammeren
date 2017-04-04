@@ -11,10 +11,11 @@
           <div class="col-lg-6">
             <div class="input-group">
               <span class="input-group-btn">
-                <button class="btn btn-danger" type="button"> - </button>
-                <button class="btn btn-primary" type="button"> + </button>
+              <!-- de button's moeten unieke id's meekrijgen -->
+                <button class="btn btn-danger" id="product1min" type="button"> - </button>
+                <button class="btn btn-primary" id="product1plus" type="button"> + </button>
               </span>
-              <input type="text" class="form-control" placeholder=" 0 ">
+              <input type="text" id="product1" class="form-control" placeholder=" 0 ">
             </div>
           </div>
 
@@ -80,6 +81,8 @@
       </div>
     </div>
   </div>
-
 
 </div>
+
+<script src="js/bestellen.js" defer></script>
+
