@@ -1,6 +1,11 @@
 jQuery(document).ready(function() {
     console.log("Bestellen.js loaded");
+    // categorieen
+    let categories = ["Pasta", "Pizza", "Dranken"];
 
+    $("a:contains('Bestellen')").after();
+
+    // events
     $("button").click(function(event) {
         // op welke knop is geklikt.
         let clickedId = $(this).attr("id");
