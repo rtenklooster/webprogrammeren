@@ -59,12 +59,8 @@ if(!isset($_SESSION['logged_in'])){
     <?php include("parts/footer.php"); ?>
 
     <!-- javascripts laden -->
-        <script src="js/jquery-3.2.0.min.js"></script>
-<<<<<<< HEAD
-        <script src="js/bootstrap.min.js"></script>
-=======
-        <script defer src="js/bootstrap.js"></script>
->>>>>>> origin/master
-        <script src="js/logon.js"></script>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/logon.js"></script>
     </body>
 </html>
