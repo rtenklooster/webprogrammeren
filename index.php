@@ -35,7 +35,7 @@ if(!isset($_SESSION['logged_in'])){
 
     <?php include("parts/header.php"); ?>
 
-    <div class="container">
+    <div class="container" id="navigation_container">
         <div class="row">
 
                 <?php include("parts/navigation.php"); ?>

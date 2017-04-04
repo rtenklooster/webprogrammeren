@@ -84,5 +84,5 @@
   </div>
 
 </div>
-<?php print_r($_SESSION['cart']); ?>
+<?php //print_r($_SESSION['cart']); ?>
 <script src="js/bestellen.js" defer></script>

@@ -4,15 +4,18 @@ extract($_POST);
 
 function get_cart_total(){
   // Controleer of de cart gevuld is
+  if(isset($_SESSION['cart'])){
   if(is_array($_SESSION['cart'])){
     foreach($_SESSION['cart'] AS $id => $amount){
-      echo "ID: $id aantal: $amount <br />";
+      //echo "ID: $id aantal: $amount <br />";
     }
+    echo "15,95";
   }else{
-    echo "De mand is leeg";
-    echo "0.00";
+    echo "0,00";
   }
-
+}else{
+  echo "0,00";
+}
 }
 
 // Er kan gevraagd worden om totaal bedrag van het mandje (action = getTotal)

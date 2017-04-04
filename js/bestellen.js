@@ -36,8 +36,9 @@ jQuery(document).ready(function() {
                 data: "action=add_to_cart&id=" + id + "&amount=" + amount,
                 success : function(text){
                   console.log(text);
-                    if (text == "success"){
-                        //loginSuccess();
+                    if (text != "success"){
+                        updateTotal("13,50");
+                    //    $("#navigation_container").load(location.href + " #navigation_container");
                     }else{
                         //loginFailed();
                     }
