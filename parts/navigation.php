@@ -27,6 +27,8 @@
                     <li><a href="?page=veelgesteldevragen">Veelgestelde vragen</a></li>
                 </ul>
             </div>
+            <a href="index.php" class="btn btn-primary btn-lg btn-block" role="button" id="totaalBedrag">Winkelmandje: € 0,00
+            </a>
 
     </div>
 </div>

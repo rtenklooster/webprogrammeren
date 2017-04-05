@@ -17,7 +17,7 @@ $("a:contains('placeholder')").hide();
     $("button").click(function(event) {
         // op welke knop is geklikt.
         let clickedId = $(this).attr("id");
-        
+
         if (clickedId.indexOf("min") != -1) {
             let id = clickedId.substr(0, clickedId.indexOf("min"))
             // console.log(id);
@@ -32,13 +32,26 @@ $("a:contains('placeholder')").hide();
             $("#" + id + "amount").val(amount);
 
         } else if (clickedId.indexOf("order") != -1) {
-            console.log("order");
+            // Strip alle non-digits
+            let id = $(this).attr("id").replace(/\D/g,'');
+            //let id = clickedId.substr(0, clickedId.indexOf("order"))
+            let amount = Number($("#product" + id + "amount").val());
+            console.log("order ID:"+ id +" aantal: "+amount);
+
+            $.ajax({
+                type: "POST",
+                url: "functions/add_cart.php",
+                data: "action=add_to_cart&id=" + id + "&amount=" + amount,
+                success : function(text){
+                  console.log(text);
+                    if (text != "success"){
+                        updateTotal("13,50");
+                    //    $("#navigation_container").load(location.href + " #navigation_container");
+                    }else{
+                        //loginFailed();
+                    }
+                }
+            });
         }
     });
 });
-
-
-
-
-
-
