@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
     // categorieen
     let categories = ["Pasta", "Pizza", "Dranken"];
 
-     
+
     $("a:contains('placeholder')").after(function() {
     return    '<br><div class="list-group">' +
     '<a href="#" class="list-group-item active"> Pasta</a>' +
