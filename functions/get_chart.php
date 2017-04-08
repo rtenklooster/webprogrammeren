@@ -1,5 +1,4 @@
 <?php
-session_start();
 extract($_POST);
 
 function get_cart_total(){
@@ -38,13 +37,31 @@ function get_total(){
   echo "De winkelmand bevat nog geen items.";
 }
 }
+
+function getNrInChart($id){
+  // Controleer of de cart gevuld is [id] => aantal
+  if(isset($_SESSION['cart'])){
+    if(is_array($_SESSION['cart'])){
+      if(isset($_SESSION['cart'][$id])){
+        return $_SESSION['cart'][$id];
+      }else{
+        return 0;
+      }
+    }else{
+      return 0;
+    }
+  }else{
+    return 0;
+  }
+}
 // Er kan gevraagd worden om totaal bedrag van het mandje (action = getTotal)
 // Er kan gevraagd worden om alle order regels (getCart)
-if($action == "getTotal"){
-  get_cart_total();
+if(isset($action)){
+  if($action == "getTotal"){
+    get_cart_total();
+  }
+  if($action == "getCart"){
+    get_cart_detail();
+  }
 }
-if($action == "getCart"){
-  get_cart_detail();
-}
-
 ?>

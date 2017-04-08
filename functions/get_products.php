@@ -41,7 +41,7 @@ function convertPrice($input){
   // Zet prijs in centen om in nette prijs in euro's
 
   // Prijs begint met Euro teken
-  $output = "€";
+  $output = "€ ";
   // Centen naar hele bedragen
   $number = round(($input / 100),2);
   // Twee decimalen verplicht

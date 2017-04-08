@@ -1,7 +1,7 @@
 <?php
 // inporteer benodigde functies
 require_once("functions/get_products.php");
-
+require_once("functions/get_chart.php");
 // Welke productcategorie
 if(isset($_GET['cat'])){
   $catSelected = htmlspecialchars($_GET['cat']);
@@ -32,12 +32,12 @@ $producten = getProduct($catSelected, 0, 4 );
                 <button class="btn btn-danger" id="product<?php echo $product['id']; ?>min" type="button"> - </button>
                 <button class="btn btn-primary" id="product<?php echo $product['id']; ?>plus" type="button"> + </button>
               </span>
-              <input type="text" id="product<?php echo $product['id']; ?>amount" class="form-control" placeholder="0">
+              <input type="text" id="product<?php echo $product['id']; ?>amount" class="form-control" placeholder="<?php echo getNrInChart($product['id']); ?>">
             </div>
           </div>
 
           <div class="col-lg-6">
-            <button class="btn btn-primary pull-right" id="product<?php echo $product['id']; ?>order" type="button"><?php echo $product['prijs']; ?></button>
+            <button class="btn btn-primary pull-right" id="product<?php echo $product['id']; ?>order" type="button"><?php echo convertPrice($product['prijs']); ?></button>
           </div>
         </div><!-- /.row -->
 
