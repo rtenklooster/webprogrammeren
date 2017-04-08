@@ -1,7 +1,4 @@
 <?php
-// inporteer benodigde functies
-require_once("functions/get_products.php");
-require_once("functions/get_chart.php");
 // Welke productcategorie
 if(isset($_GET['cat'])){
   $catSelected = htmlspecialchars($_GET['cat']);

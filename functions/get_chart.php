@@ -1,20 +1,24 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 extract($_POST);
+require_once('get_products.php');
+require_once('database.php');
 
 function get_cart_total(){
+  $totaal = 0;
   // Controleer of de cart gevuld is
   if(isset($_SESSION['cart'])){
   if(is_array($_SESSION['cart'])){
     foreach($_SESSION['cart'] AS $id => $amount){
       //echo "ID: $id aantal: $amount <br />";
+      $totaal += (getPrice($id)[0]['prijs'] * $amount);
     }
-    echo "15,95";
-  }else{
-    echo "0,00";
   }
-}else{
-  echo "0,00";
 }
+  echo convertPrice($totaal);
 }
 
 function get_total(){

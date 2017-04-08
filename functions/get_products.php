@@ -1,6 +1,5 @@
 <?php
 // Haal producten uit de database.
-require('database.php');
 function getProductcategorie() {
     global $db;
     $sql = '
@@ -46,7 +45,6 @@ function getPrice($id){
       SELECT prijs
       FROM product
       WHERE id = :id';
-
       $stmt = $db->prepare($sql);
       $stmt->bindParam(':id', $id, PDO::PARAM_INT);
       $stmt->execute();
@@ -64,9 +62,6 @@ function getPrice($id){
 
     }
 }
-
-getPrice(1);
-getPrice("200");
 function convertPrice($input){
   // Zet prijs in centen om in nette prijs in euro's
 

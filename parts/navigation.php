@@ -1,6 +1,6 @@
 <?php
 // inporteer benodigde functies
-require("functions/get_products.php");
+require_once("functions/get_products.php");
 //
 $categories = getProductcategorie();
 if(isset($_GET['cat'])){

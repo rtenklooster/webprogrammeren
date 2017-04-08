@@ -1,6 +1,11 @@
 <?php
 // Start de sessie
 session_start();
+
+require_once('functions/database.php');
+require_once("functions/get_products.php");
+require_once("functions/get_chart.php");
+
 // Controleer of er moet worden uitgelogd
 if(isset($_POST['action']) && $_POST['action'] == "logout"){
   $_SESSION['logged_in'] = 0;
