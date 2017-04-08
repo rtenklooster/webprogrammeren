@@ -56,7 +56,7 @@ if(!isset($_SESSION['logged_in'])){
         </div>
     </div>
 
-    <?php include("parts/footer.php"); ?>
+    <!--<?php include("parts/footer.php"); ?>-->
 
     <!-- javascripts laden -->
     <script src="js/jquery-3.2.0.min.js"></script>
