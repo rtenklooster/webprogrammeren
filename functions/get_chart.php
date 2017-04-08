@@ -21,25 +21,29 @@ function get_cart_total(){
   echo convertPrice($totaal);
 }
 
-function get_total(){
+function get_cart_detail(){
   // Controleer of de cart gevuld is
   if(isset($_SESSION['cart'])){
   if(is_array($_SESSION['cart'])){
+    $i = 0;
     foreach($_SESSION['cart'] AS $id => $amount){
+
         // Haal hier de data op:
         // 1. Pizza Bolognese Small   1x    16,95   16,95   + - X
         // 2. Pizza Bolognese Small   1x    16,95   16,95   + - X
         // 3. Pizza Bolognese Small   1x    16,95   16,95   + - X
         // 4. Totaal:                 3x            41,95
-        echo "Mandindhoud";
+        if($amount > 0){
+        $result[$i] = getProductDetail($id);
+        $result[$i]["aantal"]= $amount;
+        $result[$i]["regelprijs"] = convertPrice($amount * $result[$i]["prijs"]);
+        $i ++;
+      }
     }
 
-  }else{
-    echo "De winlelmand bevat nog geen items.";
   }
-}else{
-  echo "De winkelmand bevat nog geen items.";
 }
+return $result;
 }
 
 function getNrInChart($id){
