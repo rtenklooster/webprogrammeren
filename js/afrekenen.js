@@ -6,4 +6,5 @@ $("span#remove").on("click", function(){
     $deleteRow.addClass("danger");
         $deleteRow.fadeOut(2000, function(){
     $(this).remove();
+    console.log(this);
 });});
