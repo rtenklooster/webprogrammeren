@@ -18,7 +18,7 @@ function get_cart_total(){
 }
 }
 
-function get_cart_total(){
+function get_total(){
   // Controleer of de cart gevuld is
   if(isset($_SESSION['cart'])){
   if(is_array($_SESSION['cart'])){
