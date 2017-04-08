@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root";
-$pass = "abihas";
-$name = "bdgoiusdfgjhs987r2342098fgdgbdk";
+$user = "abihas";
+$pass = "bdgoiusdfgjhs987r2342098fgdgbdk";
+$name = "pizza";
 
 try
 {

@@ -1,14 +1,15 @@
 <?php
-// dit moet nog uit de database komen: product, aantal, prijs
+// dit moet nog uit de database of sessie komen: product, aantal, prijs
 $sampleArray = [["Pizza", 3, 12.50], ["Pasta", 2, 15.50]];
 $numberProducts = count($sampleArray);
 
+//totaalbedrag uitrekenen
 $totalOrder = 0;
 foreach ($sampleArray as $product) {
     $totalOrder += $product[2];
 }
 
-// $totalOrder = 12.50;
+
 
 function intToEuro($input = 0) {
     setlocale(LC_MONETARY, 'nl_NL');
