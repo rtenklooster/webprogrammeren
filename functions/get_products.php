@@ -14,7 +14,7 @@ function getProductcategorie() {
     return $result;
 }
 
-print_r(getProductcategorie());
+//print_r(getProductcategorie());
 
 function getProduct($cat, $start, $aantal){
     // $cat = catagorie ID
@@ -37,6 +37,19 @@ function getProduct($cat, $start, $aantal){
       return($result);
 }
 
-print_r(getProduct(2, 2, 3));
+function convertPrice($input){
+  // Zet prijs in centen om in nette prijs in euro's
 
+  // Prijs begint met Euro teken
+  $output = "€";
+  // Centen naar hele bedragen
+  $number = round(($input / 100),2);
+  // Twee decimalen verplicht
+  $output .= number_format($number, 2, ',', ' ');
+  return($output);
+}
+
+//print_r(getProduct(2, 2, 3));
+
+//echo convertPrice(790);
  ?>
