@@ -8,7 +8,9 @@ $numberProducts = count($sampleArray);
 //totaalbedrag uitrekenen
 $totalOrder = 0;
 foreach ($sampleArray as $product) {
-    $totalOrder += $product["prijs"];
+  if($product["aantal"] >0 ){
+    $totalOrder += $product["prijs"] * $product["aantal"];
+  }
 }
 
 
@@ -46,7 +48,7 @@ function intToEuro($input = 0) {
                 <strong>Totaal</strong>
             </td>
             <td colspan="2">
-                <strong> <?php echo intToEuro($totalOrder); ?></strong>
+                <strong> <?php echo convertPrice($totalOrder); ?></strong>
             </td>
         </tr>
 </table>
