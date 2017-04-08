@@ -16,7 +16,7 @@ function getProductcategorie() {
 
 //print_r(getProductcategorie());
 
-function getProduct($cat, $start, $aantal){
+function getProducts($cat, $start, $aantal){
     // $cat = catagorie ID
     // $start = start entry (database)
     // $aantal = aantal resultaten (database)
@@ -37,6 +37,36 @@ function getProduct($cat, $start, $aantal){
       return($result);
 }
 
+function getPrice($id){
+    // Voer een ID, return een prijs in centen
+    global $db;
+    try
+    {
+    $sql = '
+      SELECT prijs
+      FROM product
+      WHERE id = :id';
+
+      $stmt = $db->prepare($sql);
+      $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+      $stmt->execute();
+
+      $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      return($result);
+      print_r($result);
+    }
+          catch(PDOException $e)
+    {
+        echo '<pre>';
+        echo 'Regel: '.$e->getLine().'<br>';
+        echo 'Bestand: '.$e->getFile().'<br>';
+        echo 'Foutmelding: '.$e->getMessage();
+
+    }
+}
+
+getPrice(1);
+getPrice("200");
 function convertPrice($input){
   // Zet prijs in centen om in nette prijs in euro's
 

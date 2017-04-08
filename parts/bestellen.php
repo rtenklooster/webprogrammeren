@@ -9,7 +9,7 @@ if(isset($_GET['cat'])){
     $catSelected = 1;
 }
 // Haal de producten op.
-$producten = getProduct($catSelected, 0, 4 );
+$producten = getProducts($catSelected, 0, 4 );
 
 
  ?>
@@ -32,7 +32,7 @@ $producten = getProduct($catSelected, 0, 4 );
                 <button class="btn btn-danger" id="product<?php echo $product['id']; ?>min" type="button"> - </button>
                 <button class="btn btn-primary" id="product<?php echo $product['id']; ?>plus" type="button"> + </button>
               </span>
-              <input type="text" id="product<?php echo $product['id']; ?>amount" class="form-control" placeholder="<?php echo getNrInChart($product['id']); ?>">
+              <input type="text" id="product<?php echo $product['id']; ?>amount" class="form-control" value="<?php echo getNrInChart($product['id']); ?>">
             </div>
           </div>
 
