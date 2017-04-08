@@ -1,18 +1,5 @@
 jQuery(document).ready(function() {
     console.log("Bestellen.js loaded");
-    // categorieen
-    let categories = ["Pasta", "Pizza", "Dranken"];
-
-
-    $("a:contains('placeholder')").after(function() {
-    return    '<br><div class="list-group">' +
-    '<a href="#" class="list-group-item active"> Pasta</a>' +
-    '<a href="#" class="list-group-item">Pizza</a>' +
-    '<a href="#" class="list-group-item">Dranken</a>' +
-    '</div>'
-});
-$("a:contains('placeholder')").hide();
-
     // events
     $("button").click(function(event) {
         // op welke knop is geklikt.
