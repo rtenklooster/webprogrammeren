@@ -1,6 +1,12 @@
 <div class="row">
     <div class="col-sm-6">
-        contactgegevens
+        <div class="well">
+        <strong>PHP Pizza</strong><br>
+        Zernikelaan 11<br>
+        9747 AS Groningen<br>
+        <span class="glyphicon glyphicon-earphone"></span> <a href="tel:0031505957744">(050) 595 77 44</a><br>
+        <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:info@phppizza.nl">info@phppizza.nl</a>
+        </div>
     </div>
     <div class="col-sm-6">
         <div id="map">
@@ -23,7 +29,8 @@
             '<div id="bodyContent">'+
             '<p>Zernikelaan 11<br>' +
             '9747 AS Groningen<br>' +
-            '<a href=\'tel:0505957744\'>(050) 595 77 44</a>' +
+            '<a href=\'tel:0505957744\'>(050) 595 77 44</a><br>' +
+            '<a href="mailto:info@phppizza.nl">info@phppizza.nl</a>' +
             '</p>'
             '</div>'+
             '</div>';
