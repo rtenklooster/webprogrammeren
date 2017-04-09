@@ -7,8 +7,8 @@ $pass = "";
 $name = "pizza";
 }else{
 $host = "localhost";
-$user = "root";
-$pass = "";
+$user = "abihas";
+$pass = "bdgoiusdfgjhs987r2342098fgdgbdk";
 $name = "pizza";
 }
 try

@@ -44,7 +44,9 @@ function get_cart_detail(){
 
   }
 }
-return $result;
+if (isset($result)) {
+  return $result;
+  }
 }
 
 function getNrInChart($id){
