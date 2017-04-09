@@ -6,10 +6,10 @@ $user = "root";
 $pass = "";
 $name = "pizza";
 }else{
-  $host = "localhost";
-  $user = "abihas";
-  $pass = "bdgoiusdfgjhs987r2342098fgdgbdk";
-  $name = "pizza";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$name = "pizza";
 }
 try
 {
