@@ -1,8 +1,7 @@
 <?php
 // dit moet nog uit de database of sessie komen: product, aantal, prijs
 $sampleArray = get_cart_detail();
-print_r($sampleArray);
-//$sampleArray = [["Pizza", 3, 12.50], ["Pasta", 2, 15.50]];
+
 $numberProducts = count($sampleArray);
 
 //totaalbedrag uitrekenen
@@ -15,11 +14,7 @@ foreach ($sampleArray as $product) {
 
 
 
-function intToEuro($input = 0) {
-    setlocale(LC_MONETARY, 'nl_NL');
-    $value = money_format('%(#1n', $input);
-    return str_replace('Eu','&euro;',$value);
-}
+
 
 
 ?>
@@ -35,7 +30,7 @@ function intToEuro($input = 0) {
         <?php foreach ($sampleArray as $index=>$product) {
             // var_dump($index);
             // var_dump($product);
-            echo "<tr>";
+            echo "<tr id={$product['id']}>";
                 echo "<td>{$product["naam"]}</td>";
                 echo "<td>{$product["aantal"]}</td>";
                 echo "<td>{$product["regelprijs"]}</td>";

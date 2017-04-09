@@ -37,6 +37,7 @@ function get_cart_detail(){
         $result[$i] = getProductDetail($id);
         $result[$i]["aantal"]= $amount;
         $result[$i]["regelprijs"] = convertPrice($amount * $result[$i]["prijs"]);
+        $result[$i]["id"] = $id;
         $i ++;
       }
     }
