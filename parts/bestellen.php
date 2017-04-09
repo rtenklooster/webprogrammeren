@@ -16,7 +16,7 @@ $producten = getProducts($catSelected, 0, 4 );
   ?>
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="http://vvhegelsom.nl/wp-content/uploads/2016/11/Pizza-Free-PNG-Image.png" alt="...">
+      <img src="img/products/<?php echo $product['id'] ?>.png" alt="<?php echo $product['naam'] ?>">
       <div class="caption">
         <h3><?php echo $product['naam'];?> ({MAAT})</h3>
         <p><?php echo $product['omschrijving'];?></p>
