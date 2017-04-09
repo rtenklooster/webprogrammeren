@@ -36,7 +36,6 @@ CREATE TABLE product (
   naam                       	varchar(100)             	NOT NULL,
   omschrijving               	text,
   categorie_id               	INTEGER UNSIGNED         	NOT NULL,
-  productgrootte_id				INTEGER UNSIGNED,
   prijs              			int(10)                   	NOT NULL,
 PRIMARY KEY(id),
 FOREIGN KEY(categorie_id)    		REFERENCES productcategorie(id)
@@ -90,7 +89,7 @@ VALUES	("Bolognese","Tomatensaus met gehakt en parmezaanse kaas",3,950),
 
 INSERT into product (naam,omschrijving,categorie_id, prijs)	
 VALUES	("Lasagne della casa","Dunne pastabladen in lagen bereidt met room en Bolognese saus en mozzarella kaas en Parmezaanse kaas",4,1250),
-		("Lasagne verde","Dunne pastabladen in lagen bereidt met room/bladspinazie/ricotta/kaas/pijnboompitten en Parmezaanse kaas af gegarneerd met walnoten",4,1350),
+		("Lasagne verde","Dunne pastabladen in lagen bereidt met roombladspinazie/ricotta/kaas/pijnboompitten en Parmezaanse kaas af gegarneerd met walnoten",4,1350),
 		("Canneloni di mamma","Deegrolletjes gevuld met kalfsgehakt/ricotta kaas/pijnboompitten en rozijnen",4,1475);
 		
 
