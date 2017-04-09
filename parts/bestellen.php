@@ -18,7 +18,7 @@ $producten = getProducts($catSelected, 0, 4 );
     <div class="thumbnail">
       <img src="img/products/<?php echo $product['id'] ?>.png" alt="<?php echo $product['naam'] ?>">
       <div class="caption">
-        <h3><?php echo $product['naam'];?> ({MAAT})</h3>
+        <h3><?php echo $product['naam'];?></h3>
         <p><?php echo $product['omschrijving'];?></p>
 
         <div class="row">
