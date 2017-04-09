@@ -29,12 +29,7 @@ CREATE TABLE klant (
   FOREIGN KEY(autorisatie_id)	REFERENCES autorisatie(id)
 );
 
-CREATE TABLE productgrootte (
-  id                         	INTEGER UNSIGNED         	NOT NULL     AUTO_INCREMENT,
-  naam                       	varchar(40)             	NOT NULL,
-  prijstoevoeging				int(10),
-  PRIMARY KEY(id)
-);
+
 
 CREATE TABLE product (
   id                         	INTEGER UNSIGNED         	NOT NULL     AUTO_INCREMENT,
@@ -44,7 +39,6 @@ CREATE TABLE product (
   productgrootte_id				INTEGER UNSIGNED,
   prijs              			int(10)                   	NOT NULL,
 PRIMARY KEY(id),
-FOREIGN KEY(productgrootte_id)    	REFERENCES productgrootte(id),
 FOREIGN KEY(categorie_id)    		REFERENCES productcategorie(id)
 );
 
@@ -75,10 +69,6 @@ VALUES 	("Dranken"),
 		("Pasta's"),
 		("Lasagne's");
 
-INSERT into productgrootte (naam, prijstoevoeging)
-VALUES 	("small", 0),
-		("medium", 250),
-		("large", 500);
 
 INSERT into product (naam, prijs, categorie_id)
 VALUES 	("Cola",200,1),
