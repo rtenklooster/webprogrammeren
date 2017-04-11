@@ -1,6 +1,7 @@
 <?php
 $hostname = getHostName();
-if($hostname == "MacBook-Pro-van-Richard.local"){
+
+if($hostname == "MacBook-Pro-van-Richard.local" || $hostname == "SURFACE-RICHARD"){
 $host = "localhost";
 $user = "root";
 $pass = "";
