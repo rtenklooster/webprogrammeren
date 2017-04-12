@@ -30,6 +30,19 @@ $("span#remove").on("click", function(){
     });
 });
 
+// waarde van de betaalmethode knop updaten
+$(".dropdown-menu").on('click', 'li a', function(){
+      $("button#betaalmethode").html($(this).text() + " <span class='caret'></span>");
+      $("button#betaalmethode").val($(this).text().replace(/\s+/g, ''));
+   });
+
+$("button#bestel").on("click", function() {
+    console.log("bestel knop gedrukt");
+
+    $betaalmethode = $("button#betaalmethode").val();
+
+    
 
 
+});
 

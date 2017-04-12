@@ -46,50 +46,51 @@ if($sampleArray) {
     </div>
 
     <h3>Afleveradres</h3>
-    <form>
+    <form id="afleveradres" action="?page=bedankt" method="POST">
         <div class="form-group">
             <div class="row">
                 <div class="col-xs-12">
                     <label for="naam">Naam</label>
-                    <input type="text" name="naam" class="form-control">
+                    <input type="text" name="naam" class="form-control" oninvalid="this.setCustomValidity('Vul uw naam in')" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-8">
                     <label for="straat">Straat</label>
-                    <input type="text" name="straat" class="form-control">
+                    <input type="text" name="straat" class="form-control" oninvalid="this.setCustomValidity('Vul uw straat in')" required>
                 </div>
                 <div class="col-xs-4">
                     <label for"huisnummer">Huisnummer</label>
-                    <input type="text" name="huisnummer" class="form-control">
+                    <input type="text" name="huisnummer" class="form-control" oninvalid="this.setCustomValidity('Vul uw huisnummer in')" required="true">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-4">
                     <label for="postcode">Postcode</label>
-                    <input type="text" name="postcode" class="form-control" pattern="^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$">
+                    <input type="text" name="postcode" class="form-control" pattern="^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$" oninvalid="this.setCustomValidity('Vul uw postcode in')" required>
                 </div>
                 <div class="col-xs-8">
                     <label for="woonplaats">Woonplaats</label>
-                    <input type="text" name="woonplaats" class="form-control">
+                    <input type="text" name="woonplaats" class="form-control" oninvalid="this.setCustomValidity('Vul uw woonplaats in')" required>
                 </div>
             </div>
         </div>
+    
+
+        <h3>Betaalmethode</h3>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="betaalmethode" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Kies <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="betaalmethode">
+                <li id="ideal"><a href="#">iDeal</a></li>
+                <li id="bezorger"><a href="#">Aan de bezorger</a></li>
+            </ul>
+
+        </div>
+
+        <button id="bestel" class="btn btn-primary btn-lg pull-right">Bestel</button>
     </form>
-
-    <h3>Betaalmethode</h3>
-    <div class="dropdown">
-         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-             Kies <span class="caret">
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li id="ideal"><a href="#">iDeal</a></li>
-            <li id="bezorger"><a href="#">Aan de bezorger</a></li>
-        </ul>
-
-    </div>
-
-    <button class="btn btn-primary btn-lg pull-right">Bestel</button>
 
     <?php
 }
