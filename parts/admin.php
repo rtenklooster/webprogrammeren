@@ -23,31 +23,50 @@ foreach ($sampleArray as $product) {
 ?>
 <div class="panel panel-default">
   <!-- Default panel contents -->
-    <div class="panel-heading"><h3 class="panel-title">Bestellingen</h3></div>
-        <table class="table table-hover">
+<table class="table table-bordered table-striped">
+    <thead>
         <tr>
-            <th>Product</th>
-            <th>Aantal</th>
-            <th colspan="2">Prijs</th>
+            <th>Naam</th>
+            <th>omschrijving</th>
+            <th>Categorie</th>
+            <th>Prijs</th>
+            <th>Edit</th>
         </tr>
-        <?php foreach ($sampleArray as $index=>$product) {
-            // var_dump($index);
-            // var_dump($product);
-            echo "<tr id={$product['id']}>";
-                echo "<td>{$product["naam"]}</td>";
-                echo "<td>{$product["aantal"]}</td>";
-                echo "<td>{$product["regelprijs"]}</td>";
-                echo "<td class='text-right'><span class='glyphicon glyphicon-remove red' id='remove'></span></td>";
-            echo "</tr>";
-        }
-        ?>
+    </thead>
+    <tbody>
         <tr>
-            <td colspan="2">
-                <strong>Totaal</strong>
-            </td>
-            <td colspan="2">
-                <strong> <?php echo convertPrice($totalOrder); ?></strong>
+            <td style="text-align:center;">123@hotmail.com</td>
+            <td style="text-align:center;">0123456</td>
+            <td style="text-align:center;">user123</td>
+            <td style="text-align:center;">Admin</td>
+            <td style="text-align:center;">
+                <button class="btn btn-success" contenteditable="false" data-target="#myModal" data-toggle="modal">Edit</button>
             </td>
         </tr>
+    </tbody>
 </table>
+<div tabindex="-1" class="modal fade" id="myModal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content"></div>
+    </div>
+    <div class="modal-dialog">
+        <div class="modal-content"></div>
+    </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal"> <span aria-hidden="true">×   </span><span class="sr-only">Close</span>
+
+                </button>
+                 <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                <button class="btn btn-primary" type="button">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
