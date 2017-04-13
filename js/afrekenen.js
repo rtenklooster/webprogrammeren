@@ -33,6 +33,6 @@ $("span#remove").on("click", function(){
 $(".dropdown-menu").on('click', 'li a', function(){
       $("button#betaalmethode").html($(this).text() + " <span class='caret'></span>");
       $("button#betaalmethode").val($(this).text().replace(/\s+/g, ''));
-   });
+});
 
 

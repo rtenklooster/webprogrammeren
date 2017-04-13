@@ -49,21 +49,27 @@ if($sampleArray) {
     <form id="afleveradres" action="?page=bedankt" method="POST">
         <div class="form-group">
             <div class="row">
-                <div class="col-xs-12">
-                    <label for="naam">Naam</label>
-                    <input type="text" name="naam" class="form-control" required="true">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <label for="straat">Straat</label>
-                    <input type="text" name="straat" class="form-control" required="true">
-                </div>
                 <div class="col-xs-4">
-                    <label for"huisnummer">Huisnummer</label>
-                    <input type="text" name="huisnummer" class="form-control" required="true">
+                    <label for="voornaam">Voornaam</label>
+                    <input type="text" name="voornaam" class="form-control">
+                </div>
+                <div class="col-xs-2">
+                    <label for="tussenvoegsel">Tussenvoegsel</label>
+                    <input type="text" name="tussenvoegsel" class="form-control">
+                </div>
+                <div class="col-xs-6">
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" name="achternaam" class="form-control">
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="adres">Adres</label>
+                    <input type="text" name="adres" class="form-control" required="true">
+                </div>
+            </div>
+            
             <div class="row">
                 <div class="col-xs-4">
                     <label for="postcode">Postcode</label>
@@ -74,23 +80,24 @@ if($sampleArray) {
                     <input type="text" name="woonplaats" class="form-control" required="true">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" class="form-control" required="true">
+                </div>
+                <div class="col-xs-6">
+                    <label for="telefoonnummer">Telefoonnummer</label>
+                    <input type="number" name="telefoonnummer" class="form-control" required="true">
+                </div>
+            </div>
         </div>
 
-        <!--<div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="betaalmethode" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Kies <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="betaalmethode">
-                <li id="ideal"><a href="#">iDeal</a></li>
-                <li id="bezorger"><a href="#">Aan de bezorger</a></li>
-            </ul>
-        </div>-->
         <div class="form-group">
             <label for="betaalmethode">Betaalmethode</label>
             <select name="betaalmethode" class="form-control" id="betaalmethode" required>
                 <option value=""></option>
                 <option value="ideal">iDeal</option>
-                <option value="bijdebezorgen">Bij de bezorger</option>
+                <option value="bijdebezorger">Bij de bezorger</option>
             </select>
         </div>
 
