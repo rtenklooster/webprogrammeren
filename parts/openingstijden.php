@@ -28,4 +28,4 @@
         <td>16:00 - 23:00</td>
     </tr>
 </table>
-<p class="lead">We zijn ook geopend tijdens zon- en feestdagen</p>
+<p class="lead">We zijn ook geopend tijdens en feestdagen</p>
