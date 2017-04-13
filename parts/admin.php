@@ -1,24 +1,17 @@
-<?php
-// http://www.bootply.com/TN4AYw6CwH implementeren
-
-
-// dit moet nog uit de database of sessie komen: product, aantal, prijs
-$productArray = getAllProducts();
-/*echo "<pre>";
-print_r($productArray);
-echo "</pre>";
-exit;
-*/
-
-
-
-
-?>
 <div class="panel panel-default">
 <?php
+
+// Controleer of een gebruiker is ingelogd.
 if(!$_SESSION['logged_in']){
     echo "Helaas u heeft geen rechten om deze pagina te bezoeken.";
   }else{
+    // Haal de producten uit de database
+    $productArray = getAllProducts();
+
+    // Admin.php kan twee acties hebben; producten wijzigen of bestellingen inzien.
+    // controleer welke actie gewenst is, en laat de betreffende data zien.
+    if(isset($_GET['adminactie']) && $_GET['adminactie'] == "producten"){
+      // producten wijzigen.
     ?>
   <!-- Default panel contents -->
 <table class="table table-bordered table-striped">
@@ -35,7 +28,7 @@ if(!$_SESSION['logged_in']){
     </thead>
     <tbody>
       <?php
-
+      // Doorloop de producten array en maak voor ieder product een tabel rij aan.
       foreach($productArray as $product){
         echo '
             <tr>
@@ -51,10 +44,8 @@ if(!$_SESSION['logged_in']){
                   <a href="functions/updateProduct.php?action=delete&id='.$product["id"].'" class="btn btn-warning" role="button">Wis</a>
                 </td>
             </tr>
-
         ';
-
-}
+      }
        ?>
 
     </tbody>
@@ -84,6 +75,9 @@ if(!$_SESSION['logged_in']){
     </div>
 </div>
 <?php
+}elseif(isset($_GET['adminactie']) && $_GET['adminactie'] == "producten"){
+  echo "Ok" ;
+}
 }
  ?>
 </div>

@@ -60,6 +60,12 @@ if(isset($_GET['cat'])){
             </div>
             <a href="?page=afrekenen" class="btn btn-primary btn-lg btn-block" role="button" id="totaalBedrag">Winkelmandje: € 0,00
             </a>
+            <?php
+                if($_SESSION['logged_in']){
+                  echo '<a href="?page=admin&acminactie=bestellingen" class="btn btn-primary btn-warning btn-block" role="button" >Bestellingen inzien</a>';
+                  echo '<a href="?page=admin&adminactie=producten" class="btn btn-primary btn-warning btn-block" role="button" >Producten wijzigen</a>';
+                }
+            ?>
 
     </div>
 </div>
