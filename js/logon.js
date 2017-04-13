@@ -39,6 +39,7 @@ function loginSuccess(){
   $( "#loginForm" ).hide();
   // Ververs de inhoud van de header ( moet nu een in / uitlog knop komen)
   $("#header").load(location.href + " #header");
+  window.location.replace("index.php?page=admin"); 
   //$( "#loginText" ).html( "uitloggen" );
 
 }
