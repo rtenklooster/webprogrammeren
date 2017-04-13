@@ -38,7 +38,7 @@ if($sampleArray) {
                 <td colspan="2">
                     <strong>Totaal</strong>
                 </td>
-                <td colspan="2">
+                <td id="totaalWinkelmandje" colspan="2">
                     <strong> <?php echo convertPrice($totalOrder); ?></strong>
                 </td>
             </tr>

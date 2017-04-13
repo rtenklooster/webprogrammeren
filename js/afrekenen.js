@@ -17,10 +17,9 @@ $("span#remove").on("click", function(){
             success : function(text){
                 console.log(text);
                 if (text != "success"){
-                    // updateTotal("13,50");
-                    //    $("#navigation_container").load(location.href + " #navigation_container");
+                    updateTotal();    
                 } else {
-                //loginFailed();
+                
                 }
             }
         });
