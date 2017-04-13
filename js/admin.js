@@ -12,7 +12,9 @@ $(".btn[data-target='#myModal']").click(function() {
        var formGroup = $('<div class="form-group"></div>');
        if(columnHeader == "Id"){
          formGroup.append('<input class="form-control" name="'+columnHeader+i+'" id="'+columnHeader+i+'" value="'+columnValues[i]+'" type="hidden" />');
-       }else {
+       }else if (columnHeader == "Wijzig"){
+
+       } else{
        formGroup.append('<label for="'+columnHeader+'">'+columnHeader+'</label>');
        if(columnHeader == "Categorie"){
 

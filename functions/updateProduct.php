@@ -4,7 +4,10 @@ session_start();
 // Login requests worden door de formhandler afgevangen.
 // Importeer de database connectie
 require_once("database.php");
-
+if(!$_SESSION['logged_in']){
+  echo "Wegwezen, je moet zijn ingelogd";
+  exit;
+}else{
 
 if(count($_POST)){
 //  print_r($_POST);
@@ -30,8 +33,21 @@ $escaped_url = str_replace("//", "http://", $escaped_url);
 // Doorsturen naar vorige pagina.
 echo '<meta http-equiv="refresh" content="0; url='.$escaped_url.'" />';
 
+}elseif(isset($_GET['action']) && $_GET['action'] == "delete"){
+  echo "we gaan $id wissen";
+  wisProduct($_GET['id']);
+  $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+
+  $escaped_url = htmlspecialchars( $url, ENT_QUOTES, 'UTF-8' );
+  $id = $_GET['id'];
+  $escaped_url = str_replace("functions/updateProduct.php??action=delete&id=$id", "index.php?page=admin", $escaped_url);
+  $escaped_url = str_replace("//", "http://", $escaped_url);
+  // Doorsturen naar vorige pagina.
+  echo $escaped_url;
+  echo '<meta http-equiv="refresh" content="0; url='.$escaped_url.'" />';
 }
 
+}
 function updateProduct($id, $naam, $omschrijving, $categorie, $prijs){
   GLOBAL $db;
   $sql = '
@@ -52,5 +68,15 @@ function updateProduct($id, $naam, $omschrijving, $categorie, $prijs){
     $stmt->execute();
 }
 
+function wisProduct($id){
+  GLOBAL $db;
+  $sql = '
+    DELETE FROM product
+    WHERE product.id = :id
+    LIMIT 1';
 
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+}
  ?>

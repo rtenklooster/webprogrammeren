@@ -15,6 +15,11 @@ exit;
 
 ?>
 <div class="panel panel-default">
+<?php
+if(!$_SESSION['logged_in']){
+    echo "Helaas u heeft geen rechten om deze pagina te bezoeken.";
+  }else{
+    ?>
   <!-- Default panel contents -->
 <table class="table table-bordered table-striped">
     <thead>
@@ -24,7 +29,8 @@ exit;
             <th>Omschrijving</th>
             <th>Categorie</th>
             <th>Prijs in centen</th>
-            <th>Edit</th>
+            <th>Wijzig</th>
+            <th>Wis</th>
         </tr>
     </thead>
     <tbody>
@@ -39,7 +45,10 @@ exit;
                 <td style="text-align:left;">'.$product["categorie"].'</td>
                 <td style="text-align:left;">'.$product["prijs"].'</td>
                 <td style="text-align:left;">
-                    <button class="btn btn-success" contenteditable="false" data-target="#myModal" data-toggle="modal">Edit</button>
+                    <button class="btn btn-success" contenteditable="false" data-target="#myModal" data-toggle="modal">Wijzig</button>
+                </td>
+                <td style="text-align:left;">
+                  <a href="functions/updateProduct.php?action=delete&id='.$product["id"].'" class="btn btn-warning" role="button">Wis</a>
                 </td>
             </tr>
 
@@ -74,4 +83,7 @@ exit;
         </div>
     </div>
 </div>
+<?php
+}
+ ?>
 </div>
