@@ -1,18 +1,5 @@
 <?php
-// http://www.bootply.com/TN4AYw6CwH implementeren
-
-
-// dit moet nog uit de database of sessie komen: product, aantal, prijs
 $productArray = getAllProducts();
-/*echo "<pre>";
-print_r($productArray);
-echo "</pre>";
-exit;
-*/
-
-
-
-
 ?>
 <div class="panel panel-default">
 <?php

@@ -37,7 +37,16 @@ if(isset($_GET['cat'])){
             <?php
           }
         };
+            
+           
+            
+            
+            
+            
             ?>
+            
+
+
             <div class="btn-group btn-block">
                 <button type="button" class="btn btn-default btn-lg dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Wie wij zijn <span class="caret"></span>
@@ -60,6 +69,18 @@ if(isset($_GET['cat'])){
             </div>
             <a href="?page=afrekenen" class="btn btn-primary btn-lg btn-block" role="button" id="totaalBedrag">Winkelmandje: € 0,00
             </a>
+
+            <?php
+                 if($_SESSION['logged_in']) {
+                    ?>
+                    <div class="brn-group btn-block">
+                        <a href="?page=admin" class="btn btn-warning btn-lg btn-block">Producten</a>
+                        <a href="?page=admin2" class="btn btn-warning btn-lg btn-block">Bestellingen</a>
+                    
+                    </div>
+                    <?php
+                }
+            ?>
 
     </div>
 </div>
