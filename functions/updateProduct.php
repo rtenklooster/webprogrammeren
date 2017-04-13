@@ -13,7 +13,7 @@ if(count($_POST)){
 //  print_r($_POST);
   extract($_POST);
 
-  $id = htmlspecialchars($Id0);
+  $productId = htmlspecialchars($Id0);
   $naam = htmlspecialchars($Naam1);
   $omschrijving = htmlspecialchars($Omschrijving2);
   $categorie = htmlspecialchars($Categorie3);
@@ -24,7 +24,7 @@ if(count($_POST)){
   echo $categorie."<br>";
   echo $prijs."<br>";
 */
-updateProduct($id, $naam, $omschrijving, $categorie, $prijs);
+updateProduct($productId, $naam, $omschrijving, $categorie, $prijs);
 $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
 $escaped_url = htmlspecialchars( $url, ENT_QUOTES, 'UTF-8' );
@@ -40,8 +40,6 @@ echo '<meta http-equiv="refresh" content="0; url='.$escaped_url.'" />';
   $escaped_url = $url;
   $id = $_GET['id'];
   $string = "functions/updateProduct.php?action=delete&id=".$id;
-  echo $string;
-  echo "<br>".  $escaped_url;
   $escaped_url = str_replace($string, "index.php?page=admin", $escaped_url);
   $escaped_url = str_replace("//", "http://", $escaped_url);
   // Doorsturen naar vorige pagina.
