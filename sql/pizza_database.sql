@@ -12,7 +12,6 @@ PRIMARY KEY(id)
 CREATE TABLE klant (
   id                         	INTEGER UNSIGNED         	NOT NULL     AUTO_INCREMENT,
   emailadres                 	varchar(60)              	NOT NULL,
-  wachtwoord                 	varchar(128)             	NOT NULL,
   voornaam                   	varchar(40),
   tussenvoegsel              	varchar(20),
   achternaam                 	varchar(40)              	NOT NULL,
