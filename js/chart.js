@@ -12,6 +12,7 @@ function updateTotal(){
       success : function(text){
         console.log(text);
         $( "#totaalBedrag" ).text( "Winkelmandje: "+text);
+        $( "#totaalWinkelmandje strong" ).text(text);
       }
   });
 };
