@@ -69,16 +69,16 @@ if(!$_SESSION['logged_in']){
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button class="close" type="button" data-dismiss="modal"> <span aria-hidden="true">×   </span><span class="sr-only">Close</span>
+                <button class="close" type="button" data-dismiss="modal"> <span aria-hidden="true">×   </span><span class="sr-only">Sluit</span>
 
                 </button>
-                 <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                 <h4 class="modal-title" id="myModalLabel">Wijzig product</h4>
 
             </div>
             <div class="modal-body"></div>
             <div class="modal-footer">
-                <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
-                <button class="btn btn-primary" type="button">Save changes</button>
+                <button class="btn btn-default" type="button" data-dismiss="modal">Sluiten</button>
+                <button class="btn btn-primary" type="button">Opslaan</button>
             </div>
         </div>
     </div>
