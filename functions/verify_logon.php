@@ -2,7 +2,10 @@
 session_start();
 // Controleer of een gebruikers is ingelogd - of niet.
 // Login requests worden door de formhandler afgevangen.
+// Importeer de database connectie
 require_once("database.php");
+
+// Extract de post data.
 extract($_POST);
 
 function verify_logon($username, $password){
@@ -43,7 +46,6 @@ function verify_logon($username, $password){
   }
 }
 
-//print_R(verify_logon("a@a.a", "standaardwachtwoord"));
 // Test ingegeven credentials.
 if(isset($email) && isset($password) && $action == "login"){
   verify_logon($email, $password);
