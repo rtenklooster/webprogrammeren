@@ -3,19 +3,12 @@
 
 
 // dit moet nog uit de database of sessie komen: product, aantal, prijs
-$sampleArray = get_cart_detail();
-
-$numberProducts = count($sampleArray);
-
-//totaalbedrag uitrekenen
-$totalOrder = 0;
-foreach ($sampleArray as $product) {
-  if($product["aantal"] >0 ){
-    $totalOrder += $product["prijs"] * $product["aantal"];
-  }
-}
-
-
+$productArray = getAllProducts();
+/*echo "<pre>";
+print_r($productArray);
+echo "</pre>";
+exit;
+*/
 
 
 
@@ -26,23 +19,35 @@ foreach ($sampleArray as $product) {
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
+            <th>Id</th>
             <th>Naam</th>
-            <th>omschrijving</th>
+            <th>Omschrijving</th>
             <th>Categorie</th>
-            <th>Prijs</th>
+            <th>Prijs in centen</th>
             <th>Edit</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td style="text-align:center;">123@hotmail.com</td>
-            <td style="text-align:center;">0123456</td>
-            <td style="text-align:center;">user123</td>
-            <td style="text-align:center;">Admin</td>
-            <td style="text-align:center;">
-                <button class="btn btn-success" contenteditable="false" data-target="#myModal" data-toggle="modal">Edit</button>
-            </td>
-        </tr>
+      <?php
+
+      foreach($productArray as $product){
+        echo '
+            <tr>
+                <td style="text-align:left;">'.$product["id"].'</td>
+                <td style="text-align:left;">'.$product["naam"].'</td>
+                <td style="text-align:left;">'.$product["omschrijving"].'</td>
+                <td style="text-align:left;">'.$product["categorie"].'</td>
+                <td style="text-align:left;">'.$product["prijs"].'</td>
+                <td style="text-align:left;">
+                    <button class="btn btn-success" contenteditable="false" data-target="#myModal" data-toggle="modal">Edit</button>
+                </td>
+            </tr>
+
+        ';
+
+}
+       ?>
+
     </tbody>
 </table>
 <div tabindex="-1" class="modal fade" id="myModal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">

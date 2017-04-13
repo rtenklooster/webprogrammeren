@@ -36,6 +36,22 @@ function getProducts($cat, $start, $aantal){
       return($result);
 }
 
+function getAllProducts(){
+    // Haal alle producten uit de database
+    global $db;
+    $sql = '
+      SELECT product.id, product.naam, product.omschrijving, product.prijs, productcategorie.naam AS categorie
+      FROM product
+      JOIN productcategorie ON product.categorie_id = productcategorie.id
+      ORDER BY categorie_id, naam';
+
+      $stmt = $db->prepare($sql);
+      $stmt->execute();
+
+      $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      return($result);
+}
+
 function getPrice($id){
     // Voer een ID, return een prijs in centen
     global $db;
