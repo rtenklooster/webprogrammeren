@@ -75,7 +75,7 @@ if($sampleArray) {
                 </div>
             </div>
         </div>
-    
+
 
         <h3>Betaalmethode</h3>
         <div class="dropdown">
@@ -93,6 +93,16 @@ if($sampleArray) {
     </form>
 
     <?php
+}else{
+  ?>
+
+      <div class="panel panel-default">
+      <!-- Default panel contents -->
+          <div class="panel-heading"><h3 class="panel-title">Uw bestelling</h3></div>
+          <div class="alert alert-warning " role="alert" > Uw winkelmandje is nog leeg! Klik <a href="?page=bestellen">hier</a> om producten toe te voegen!
+          </div>
+      </div>
+<?php
 }
 ?>
 <script src="js/afrekenen.js" defer></script>

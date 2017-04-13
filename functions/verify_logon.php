@@ -11,7 +11,7 @@ function verify_logon($username, $password){
   // We vragen het password op aan de hand van een ingevulde username
 
   // String speciale characters ivm. sql injecttion.
-    $username = mysql_real_escape_string($username);
+  $username = mysql_real_escape_string($username);
 
   // Doe hier de SQL query en return het resultaat.
   $hashed_password = "";
