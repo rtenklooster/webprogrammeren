@@ -51,34 +51,32 @@ if($sampleArray) {
             <div class="row">
                 <div class="col-xs-12">
                     <label for="naam">Naam</label>
-                    <input type="text" name="naam" class="form-control" oninvalid="this.setCustomValidity('Vul uw naam in')" required>
+                    <input type="text" name="naam" class="form-control" required="true">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-8">
                     <label for="straat">Straat</label>
-                    <input type="text" name="straat" class="form-control" oninvalid="this.setCustomValidity('Vul uw straat in')" required>
+                    <input type="text" name="straat" class="form-control" required="true">
                 </div>
                 <div class="col-xs-4">
                     <label for"huisnummer">Huisnummer</label>
-                    <input type="text" name="huisnummer" class="form-control" oninvalid="this.setCustomValidity('Vul uw huisnummer in')" required="true">
+                    <input type="text" name="huisnummer" class="form-control" required="true">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-4">
                     <label for="postcode">Postcode</label>
-                    <input type="text" name="postcode" class="form-control" pattern="^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$" oninvalid="this.setCustomValidity('Vul uw postcode in')" required>
+                    <input type="text" name="postcode" class="form-control" pattern="^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$" required="true">
                 </div>
                 <div class="col-xs-8">
                     <label for="woonplaats">Woonplaats</label>
-                    <input type="text" name="woonplaats" class="form-control" oninvalid="this.setCustomValidity('Vul uw woonplaats in')" required>
+                    <input type="text" name="woonplaats" class="form-control" required="true">
                 </div>
             </div>
         </div>
 
-
-        <h3>Betaalmethode</h3>
-        <div class="dropdown">
+        <!--<div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" id="betaalmethode" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Kies <span class="caret"></span>
             </button>
@@ -86,7 +84,14 @@ if($sampleArray) {
                 <li id="ideal"><a href="#">iDeal</a></li>
                 <li id="bezorger"><a href="#">Aan de bezorger</a></li>
             </ul>
-
+        </div>-->
+        <div class="form-group">
+            <label for="betaalmethode">Betaalmethode</label>
+            <select name="betaalmethode" class="form-control" id="betaalmethode" required>
+                <option value=""></option>
+                <option value="ideal">iDeal</option>
+                <option value="bijdebezorgen">Bij de bezorger</option>
+            </select>
         </div>
 
         <button id="bestel" class="btn btn-primary btn-lg pull-right">Bestel</button>
