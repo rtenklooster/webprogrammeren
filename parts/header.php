@@ -8,7 +8,9 @@
                   <?php if(!$logged_in){
                     echo "inloggen";
                   }else{
-                    echo "uitloggen";
+                    echo "Welkom ".ucfirst(strtolower($_SESSION["user_name"]))." (uitloggen)";
+                    ?>
+                    <?php
                   }
                   ?>
                   <span class="caret"></span>
@@ -45,7 +47,7 @@
                   <div class="row">
                     <div class="container-fluid">
                       <form class="uitloggen" id="logout_formulier" method="POST" action="index.php">
-                        <button type="submit" id="login" class="btn btn-success btn-sm" name="action" value="logout">Uitloggen</button>
+                        <button type="submit" id="login" class="btn btn-danger btn-sm pull-right" name="action" value="logout">Uitloggen</button>
                       </form>
 
                     </div>
