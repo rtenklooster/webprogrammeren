@@ -22,11 +22,11 @@ CREATE TABLE klant (
   PRIMARY KEY(id)
 );
 
-CREATE TABLE users (
+CREATE TABLE user (
   id                         	INTEGER UNSIGNED         	NOT NULL     AUTO_INCREMENT,
   emailadres                 	varchar(60)              	NOT NULL,
-  wachtwoord                 	varchar(128)             	NOT NULL,
-  voornaam                   	varchar(40),
+  password                  	varchar(128)             	NOT NULL,
+  naam                   	    varchar(40),
   PRIMARY KEY(id),
   UNIQUE (emailadres)
 );
@@ -59,7 +59,7 @@ FOREIGN KEY(bestelling_id)  	REFERENCES bestelling(id),
 FOREIGN KEY(product_id)      	REFERENCES product(id)
 );
 
-		
+
 INSERT into productcategorie (naam)
 VALUES 	("Dranken"),
 		("Pizza's"),
@@ -84,11 +84,9 @@ INSERT INTO `product` (`naam`, `omschrijving`, `categorie_id`, `prijs`) VALUES
 ('Canneloni di mamma', 'Deegrolletjes gevuld met kalfsgehakt, ricotta kaas, pijnboompitten en rozijnen', 4,1475);
 
 
-INSERT into users (emailadres,wachtwoord,voornaam)
+INSERT into user (emailadres,password,naam)
 VALUES 	("p.a.wesseling@st.hanze.nl","$2y$10$t3F2hQKtQfPbkXnYoDD.1ujnt8ZjVf7EgkxTlJQdPVD7ZePJfZSTq","Alexander"),
 		("r.m.ten.klooster@st.hanze.nl","$2y$10$o9266kmjWhls.JFYUTaYuuL/.6frHMWf5RzGPRFcfSEruxn870TRS","Richard"),
 		("s.e.j.kuiper@st.hanze.nl","$2y$10$MYmpheu8fKa8.v7zu1m7ZuSe10YJSO7nXH7ZE2N1ZdMBqNtR5tblS","Samuel"),
 		("m.nieuwenweg@st.hanze.nl","$2y$10$xDlLTjHGubKVI21bQkXOtu90PU3tJIb8SvkVaNMPFZupwMdn2IHe.","Micheal"),
-		("t.a.van.der.linden@st.hanze.nl","$2y$10$/Cfc1jXVQJwZNBcZbjnv5eJqa/m/Vi8E6sVMyMWpSIXZajx/oQNsq","Thomas")		;		
-		
-		
+		("t.a.van.der.linden@st.hanze.nl","$2y$10$/Cfc1jXVQJwZNBcZbjnv5eJqa/m/Vi8E6sVMyMWpSIXZajx/oQNsq","Thomas")		;
