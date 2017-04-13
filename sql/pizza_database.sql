@@ -46,7 +46,7 @@ FOREIGN KEY(categorie_id)    		REFERENCES productcategorie(id)
 CREATE TABLE bestelling(
   id                         	INTEGER UNSIGNED         	NOT NULL     AUTO_INCREMENT,
   bestel_datumtijd           	datetime                 	NOT NULL,
-  afleverkeuze                 	tinyint(1)               	NOT NULL,
+  betaalmethode                	tinyint(1)               	NOT NULL,
   gewenste_moment			 	datetime                 	NOT NULL,
   klant_id                   	INTEGER UNSIGNED         	NOT NULL,
 PRIMARY KEY(id),
