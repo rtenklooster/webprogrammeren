@@ -23,7 +23,7 @@ function getProducts($cat, $start, $aantal){
     $sql = '
       SELECT id, naam, omschrijving, prijs
       FROM product
-      WHERE categorie_id = :cat
+      WHERE categorie_id = :cat AND actief = 1
       LIMIT :start, :aantal';
 
       $stmt = $db->prepare($sql);
@@ -43,6 +43,7 @@ function getAllProducts(){
       SELECT product.id, product.naam, product.omschrijving, product.prijs, productcategorie.naam AS categorie
       FROM product
       JOIN productcategorie ON product.categorie_id = productcategorie.id
+      WHERE product.actief = 1
       ORDER BY categorie_id, naam';
 
       $stmt = $db->prepare($sql);

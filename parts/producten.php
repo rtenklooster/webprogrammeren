@@ -1,33 +1,30 @@
-<?php
-$productArray = getAllProducts();
-?>
-
 <div class="panel panel-default">
 <?php
-
 // Controleer of een gebruiker is ingelogd.
 if(!$_SESSION['logged_in']){
     echo "Helaas u heeft geen rechten om deze pagina te bezoeken.";
   }else{
     // Haal de producten uit de database
     $productArray = getAllProducts();
-
-    // Admin.php kan twee acties hebben; producten wijzigen of bestellingen inzien.
-    // controleer welke actie gewenst is, en laat de betreffende data zien.
-    if(isset($_GET['adminactie']) && $_GET['adminactie'] == "producten"){
-      // producten wijzigen.
-    ?>
+?>
   <!-- Default panel contents -->
+  <div class="panel panel-primary filterable">
+    <div class="panel-heading">
+        <h3 class="panel-title">Producten</h3>
+        <div class="pull-right">
+            <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+        </div>
+    </div>
 <table class="table table-bordered table-striped">
     <thead>
-        <tr>
-            <th>Id</th>
-            <th>Naam</th>
-            <th>Omschrijving</th>
-            <th>Categorie</th>
-            <th>Prijs in centen</th>
-            <th>Wijzig</th>
-            <th>Wis</th>
+        <tr class="filters">
+            <th id="Id"><input type="text" class="form-control" placeholder="Id" disabled></th>
+            <th id="Naam"><input type="text" class="form-control" placeholder="Naam" disabled></th>
+            <th id="Omschrijving"><input type="text" class="form-control" placeholder="Omschrijving" disabled></th>
+            <th id="Categorie"><input type="text" class="form-control" placeholder="Categorie" disabled></th>
+            <th id="Prijs in centen"><input type="text" class="form-control" placeholder="Prijs in centen" disabled></th>
+            <th id="Wijzig">Wijzig</th>
+            <th id="Wis">Wis</th>
         </tr>
     </thead>
     <tbody>
@@ -54,6 +51,7 @@ if(!$_SESSION['logged_in']){
 
     </tbody>
 </table>
+
 <div tabindex="-1" class="modal fade" id="myModal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
         <div class="modal-content"></div>
@@ -79,9 +77,6 @@ if(!$_SESSION['logged_in']){
     </div>
 </div>
 <?php
-}elseif(isset($_GET['adminactie']) && $_GET['adminactie'] == "producten"){
-  echo "Ok" ;
-}
-}
- ?>
+  }
+?>
 </div>

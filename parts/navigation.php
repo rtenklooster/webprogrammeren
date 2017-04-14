@@ -37,14 +37,14 @@ if(isset($_GET['cat'])){
             <?php
           }
         };
-            
-           
-            
-            
-            
-            
+
+
+
+
+
+
             ?>
-            
+
 
 
             <div class="btn-group btn-block">
@@ -71,22 +71,9 @@ if(isset($_GET['cat'])){
             </a>
             <?php
                 if($_SESSION['logged_in']){
-                  echo '<a href="?page=admin&acminactie=bestellingen" class="btn btn-primary btn-warning btn-block" role="button" >Bestellingen inzien</a>';
-                  echo '<a href="?page=admin&adminactie=producten" class="btn btn-primary btn-warning btn-block" role="button" >Producten wijzigen</a>';
+                  echo '<a href="?page=bestellingen" class="btn btn-primary btn-warning btn-block" role="button" >Bestellingen inzien</a>';
+                  echo '<a href="?page=producten" class="btn btn-primary btn-warning btn-block" role="button" >Producten wijzigen</a>';
                 }
             ?>
-
-            <?php
-                 if($_SESSION['logged_in']) {
-                    ?>
-                    <div class="brn-group btn-block">
-                        <a href="?page=admin" class="btn btn-warning btn-lg btn-block">Producten</a>
-                        <a href="?page=admin2" class="btn btn-warning btn-lg btn-block">Bestellingen</a>
-                    
-                    </div>
-                    <?php
-                }
-            ?>
-
     </div>
 </div>

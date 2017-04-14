@@ -68,6 +68,6 @@ if(!isset($_SESSION['logged_in'])){
     <script src="js/bootstrap.min.js"></script>
     <script src="js/logon.js"></script>
     <script src="js/chart.js"></script>
-    <script src="js/admin.js"></script>
+    <script src="js/producten.js"></script>
     </body>
 </html>

@@ -5,7 +5,7 @@ session_start();
 // Importeer de database connectie
 require_once("database.php");
 if(!$_SESSION['logged_in']){
-  echo "Wegwezen, je moet zijn ingelogd";
+  echo "<b>Wegwezen</b>, je moet zijn ingelogd";
   exit;
 }else{
 
@@ -25,22 +25,24 @@ if(count($_POST)){
   echo $prijs."<br>";
 */
 updateProduct($productId, $naam, $omschrijving, $categorie, $prijs);
+// nieuwe url aanmaken voor de redirect
 $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
-
 $escaped_url = htmlspecialchars( $url, ENT_QUOTES, 'UTF-8' );
-$escaped_url = str_replace("functions/updateProduct.php", "index.php?page=admin", $escaped_url);
+$escaped_url = str_replace("functions/updateProduct.php", "index.php?page=producten", $escaped_url);
 $escaped_url = str_replace("//", "http://", $escaped_url);
 // Doorsturen naar vorige pagina.
 echo '<meta http-equiv="refresh" content="0; url='.$escaped_url.'" />';
 
 }elseif(isset($_GET['action']) && $_GET['action'] == "delete"){
+  // We gaan een product wissen (deactiveren)
   wisProduct($_GET['id']);
   $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
+  // nieuwe url aanmaken voor de redirect
   $escaped_url = $url;
   $id = $_GET['id'];
   $string = "functions/updateProduct.php?action=delete&id=".$id;
-  $escaped_url = str_replace($string, "index.php?page=admin", $escaped_url);
+  $escaped_url = str_replace($string, "index.php?page=producten", $escaped_url);
   $escaped_url = str_replace("//", "http://", $escaped_url);
   // Doorsturen naar vorige pagina.
   //echo $escaped_url;
@@ -71,7 +73,8 @@ function updateProduct($id, $naam, $omschrijving, $categorie, $prijs){
 function wisProduct($id){
   GLOBAL $db;
   $sql = '
-    DELETE FROM product
+    UPDATE product
+    SET actief = 0
     WHERE product.id = :id
     LIMIT 1';
 
