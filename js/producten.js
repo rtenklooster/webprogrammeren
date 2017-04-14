@@ -21,24 +21,24 @@ $(".btn[data-target='#myModal']").click(function() {
          var placeholder = '<select class="form-control" name="'+columnHeader+i+'" id="'+columnHeader+i+'">';
          //formGroup.append('<option value="1">Dranken</option><option>2</option><option>3</option><option>4</option></select>');
          if(columnValues[i] == "Dranken") {
-           placeholder += '<option value="1" SELECTED >Dranken</option>';
+           placeholder += '<option value="4" SELECTED >Dranken</option>';
          }else{
-           placeholder += '<option value="1">Dranken</option>';
+           placeholder += '<option value="4">Dranken</option>';
          }
          if(columnValues[i] == "Pizza's") {
-           placeholder += '<option value="2" SELECTED >Pizza\'s</option>';
+           placeholder += '<option value="1" SELECTED >Pizza\'s</option>';
          }else{
-           placeholder += '<option value="2">Pizza\'s</option>';
+           placeholder += '<option value="1">Pizza\'s</option>';
          }
          if(columnValues[i] == "Pasta's") {
-           placeholder += '<option value="3" SELECTED >Pasta\'s</option>';
+           placeholder += '<option value="2" SELECTED >Pasta\'s</option>';
          }else{
-           placeholder += '<option value="3">Pasta\'s</option>';
+           placeholder += '<option value="2">Pasta\'s</option>';
          }
          if(columnValues[i] == "Lasagne's") {
-           placeholder += '<option value="4" SELECTED >Lasagne\'s</option>';
+           placeholder += '<option value="3" SELECTED >Lasagne\'s</option>';
          }else{
-           placeholder += '<option value="4">Lasagne\'s</option>';
+           placeholder += '<option value="3">Lasagne\'s</option>';
          }
          placeholder += "</select>";
          formGroup.append(placeholder);

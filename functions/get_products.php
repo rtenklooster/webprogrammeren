@@ -4,7 +4,7 @@ function getProductcategorie() {
     global $db;
     $sql = '
       SELECT id, naam
-      FROM productcategorie ORDER BY naam';
+      FROM productcategorie ORDER BY id';
     $stmt = $db->prepare($sql);
     //$stmt->bindParam(':para', $meter);
     $stmt->execute();

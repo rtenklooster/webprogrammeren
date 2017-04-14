@@ -3,7 +3,8 @@
 // Controleer of een gebruiker is ingelogd.
 if(!$_SESSION['logged_in']){
     echo "Helaas u heeft geen rechten om deze pagina te bezoeken.";
-  }else{
+  }elseif($_SESSION['autorisatie_id'] <= 1){
+    // Alleen level 1 mag deze pagina zien.
     // Haal de producten uit de database
     $productArray = getAllProducts();
 ?>
@@ -77,6 +78,8 @@ if(!$_SESSION['logged_in']){
     </div>
 </div>
 <?php
-  }
+}else{
+  echo "Helaas u bent ingelogd, u heeft echter niet genoeg rechten om deze pagina te bezoeken.<br> Uw autorizatie level is ". $_SESSION['autorisatie_id']." terwijl voor deze pagina een level van  <= 1 wordt vereist.";
+}
 ?>
 </div>

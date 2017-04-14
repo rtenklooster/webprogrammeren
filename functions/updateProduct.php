@@ -18,12 +18,13 @@ if(count($_POST)){
   $omschrijving = htmlspecialchars($Omschrijving2);
   $categorie = htmlspecialchars($Categorie3);
   $prijs = htmlspecialchars($Prijs_in_centen4);
-  /*echo $id."<br>";
+/*  echo $productId."<br>";
   echo $naam."<br>";
   echo $omschrijving."<br>";
   echo $categorie."<br>";
   echo $prijs."<br>";
 */
+
 updateProduct($productId, $naam, $omschrijving, $categorie, $prijs);
 // nieuwe url aanmaken voor de redirect
 $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";

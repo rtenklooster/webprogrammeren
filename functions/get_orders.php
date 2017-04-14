@@ -5,7 +5,7 @@ function getOrders() {
   $sql = '
     SELECT DISTINCT bestelling.id, bestelling.bestel_datumtijd, bestelling.gewenste_moment, klant.voornaam, klant.tussenvoegsel, klant.achternaam, klant.adres, klant.postcode, klant.woonplaats, klant.telefoonnummer
     FROM bestelling
-    JOIN klant ON bestelling.klant_id = klant_id;';
+    JOIN klant ON bestelling.klant_id = klant.id;';
 
     $stmt = $db->prepare($sql);
     $stmt->execute();
@@ -13,26 +13,24 @@ function getOrders() {
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // Doorloop alle orders om de orderregels op te halen.
-    forearch($result as $order){
+    $i = 0; // teler op 0
+    foreach($result AS $order){
+      $output[$i]['bestelling'] = $order;
       global $db;
       $sql = '
-      SELECT
+        SELECT orderregel.aantal, product.naam AS productnaam, productcategorie.naam As productcategorie
+        FROM orderregel
+        JOIN product ON orderregel.product_id = product.id
+        JOIN productcategorie ON product.categorie_id = productcategorie.id
+        WHERE orderregel.bestelling_id = :bestelling_id';
 
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':bestelling_id', $order['id'], PDO::PARAM_INT);
+        $stmt->execute();
+        $orderregels = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $output[$i]['regels']= $orderregels;
+        $i++;
     }
-    return($result);
+    return($output);
 }
 ?>
-
-<pre>
-  <?php
-    foreach(getOrders() AS $order){
-      echo $order['id'];
-      echo "<br>";
-    }
-  print_r(getOrders()); ?>
-</pre>
-SELECT orderregel.product_id, orderregel.aantal, product.naam
-FROM orderregel
-JOIN product ON orderregel.product_id = product.id
-GROUP BY orderregel.bestelling_id
-HAVING bestelling_id = 4

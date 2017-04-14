@@ -28,6 +28,7 @@ function verify_logon($username, $password){
       $_SESSION['logged_in'] = 1;
       $_SESSION['user_id'] =    $user[0]["id"];
       $_SESSION['user_name'] =  $user[0]["naam"];
+      $_SESSION['autorisatie_id'] =  $user[0]["autorisatie_id"];
       echo "success";
     }
     else {
@@ -35,6 +36,7 @@ function verify_logon($username, $password){
       unset($_SESSION['logged_in']);
       unset($_SESSION['user_id']);
       unset($_SESSION['user_name']);
+      unset($_SESSION['autorisatie_id']);
       echo "failed";
     }
   }else{
@@ -42,6 +44,7 @@ function verify_logon($username, $password){
     unset($_SESSION['logged_in']);
     unset($_SESSION['user_id']);
     unset($_SESSION['user_name']);
+    unset($_SESSION['autorisatie_id']);
     echo "failed";
   }
 }
@@ -56,7 +59,7 @@ function getUser($email) {
     global $db;
     // Maak SQL
     $sql = '
-      SELECT id, naam, password
+      SELECT id, naam, password, autorisatie_id
       FROM user
       WHERE emailadres = :email';
 
