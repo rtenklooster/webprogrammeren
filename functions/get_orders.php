@@ -11,6 +11,14 @@ function getOrders() {
     $stmt->execute();
 
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Doorloop alle orders om de orderregels op te halen.
+    forearch($result as $order){
+      global $db;
+      $sql = '
+      SELECT
+
+    }
     return($result);
 }
 ?>
@@ -23,3 +31,8 @@ function getOrders() {
     }
   print_r(getOrders()); ?>
 </pre>
+SELECT orderregel.product_id, orderregel.aantal, product.naam
+FROM orderregel
+JOIN product ON orderregel.product_id = product.id
+GROUP BY orderregel.bestelling_id
+HAVING bestelling_id = 4
