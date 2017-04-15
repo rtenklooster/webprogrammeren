@@ -77,21 +77,21 @@ VALUES 	("Pizza's"),
 		("Dranken");
 
 INSERT INTO product (naam, omschrijving, categorie_id, prijs,actief) VALUES
-('Cola', NULL, 4,200,0),
-('Cola Light', NULL, 4, 200,0),
-('Sprite', NULL, 4, 200,0),
-('Sinas', NULL, 4,200,0),
-('Margherita', 'Tomaten en Kaas', 1,750,0),
-('Napoletana', 'Tomaten, kaas, kappertjes en ansjovis', 1, 950,0),
-('Funghi', 'Tomaten, kaas en champignons', 1, 950,0),
-('Prosciutto', 'Tomaten, kaas en ham', 1, 950,0),
-('Bolognese', 'Tomatensaus, gehakt en parmezaanse kaas', 2, 950,0),
-('Napoletana', 'Tomatensaus, knoflook en peterselie', 2,900,0),
-('Carbonara', 'Spek, ei, room, peterselie en uien', 2, 1050,0),
-('Frutti di Mare', 'Tomatensaus, vissoorten, tonijn en peterselie', 2,1050,0),
-('Lasagne della casa', 'Dunne pastabladen met room , bolognese saus ,mozzarella kaas en Parmezaanse kaas', 3, 1250,0),
-('Lasagne verde', 'Dunne pastabladen met room, bladspinazie, ricotta, kaas, pijnboompitten en Parmezaanse kaas af gegarneerd met walnoten', 3,1350,0),
-('Canneloni di mamma', 'Deegrolletjes gevuld met kalfsgehakt, ricotta kaas, pijnboompitten en rozijnen', 3,1475,0);
+('Cola', NULL, 4,200,1),
+('Cola Light', NULL, 4, 200,1),
+('Sprite', NULL, 4, 200,1),
+('Sinas', NULL, 4,200,1),
+('Margherita', 'Tomaten en Kaas', 1,750,1),
+('Napoletana', 'Tomaten, kaas, kappertjes en ansjovis', 1, 950,1),
+('Funghi', 'Tomaten, kaas en champignons', 1, 950,1),
+('Prosciutto', 'Tomaten, kaas en ham', 1, 950,1),
+('Bolognese', 'Tomatensaus, gehakt en parmezaanse kaas', 2, 950,1),
+('Napoletana', 'Tomatensaus, knoflook en peterselie', 2,900,1),
+('Carbonara', 'Spek, ei, room, peterselie en uien', 2, 1050,1),
+('Frutti di Mare', 'Tomatensaus, vissoorten, tonijn en peterselie', 2,1050,1),
+('Lasagne della casa', 'Dunne pastabladen met room , bolognese saus ,mozzarella kaas en Parmezaanse kaas', 3, 1250,1),
+('Lasagne verde', 'Dunne pastabladen met room, bladspinazie, ricotta, kaas, pijnboompitten en Parmezaanse kaas af gegarneerd met walnoten', 3,1350,1),
+('Canneloni di mamma', 'Deegrolletjes gevuld met kalfsgehakt, ricotta kaas, pijnboompitten en rozijnen', 3,1475,1);
 
 
 INSERT into autorisatie (naam)
