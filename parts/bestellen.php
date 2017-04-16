@@ -6,7 +6,7 @@ if(isset($_GET['cat'])){
     $catSelected = 1;
 }
 // Haal de producten op.
-$producten = getProducts($catSelected, 0, 4 );
+$producten = getProducts($catSelected, 0, 8 );
 
 
  ?>
