@@ -1,5 +1,5 @@
 <div class="header" id="header">
-  <nav class="navbar navbar navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
             <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -47,9 +47,8 @@
                   <div class="row">
                     <div class="container-fluid">
                       <form class="uitloggen" id="logout_formulier" method="POST" action="index.php">
-                        <button type="submit" id="login" class="btn btn-danger btn-sm pull-right" name="action" value="logout">Uitloggen</button>
+                        <button type="submit" id="login" class="btn btn-danger btn-sm pull-right" name="action" value="logout">Uitloggen</button>&nbsp;
                       </form>
-
                     </div>
                   </div>
                 </div>

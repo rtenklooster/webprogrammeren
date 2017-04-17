@@ -9,6 +9,14 @@
     min-width:300px;
 }
 
+#login {
+    margin-right: 1em;
+}
+
+.dropdown-menu {
+    min-width: 215px;
+}
+
 .header {
     margin-bottom: 10px;
 }
@@ -16,6 +24,8 @@
 body {
   /* Margin bottom gelijk aan hoogte footer */
   margin-bottom: 100px;
+  min-height: 2000px;
+  padding-top: 50px;
 }
 
 .footer {
@@ -59,3 +69,5 @@ body {
 .filterable .filters input[disabled]:-ms-input-placeholder {
     color: #333;
 }
+
+
