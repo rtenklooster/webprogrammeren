@@ -5,11 +5,10 @@ function getOrders() {
   $sql = '
     SELECT DISTINCT bestelling.id, bestelling.bestel_datumtijd, bestelling.gewenste_moment, klant.voornaam, klant.tussenvoegsel, klant.achternaam, klant.adres, klant.postcode, klant.woonplaats, klant.telefoonnummer
     FROM bestelling
-    JOIN klant ON bestelling.klant_id = klant.id;';
+    JOIN klant ON bestelling.klant_id = klant.id ORDER BY bestelling.gewenste_moment DESC';
 
     $stmt = $db->prepare($sql);
     $stmt->execute();
-
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // Doorloop alle orders om de orderregels op te halen.
