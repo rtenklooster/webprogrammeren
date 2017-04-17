@@ -7,4 +7,4 @@
     <div class="col-md-4">
         <img src="img/home.png" class="img-responsive img-rounded pull-right" alt="Responsive image">
     </div>
-</row>
+</div>
