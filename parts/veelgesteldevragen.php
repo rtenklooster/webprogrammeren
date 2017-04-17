@@ -33,12 +33,12 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
             Wij willen met een grote groep komen. Is een groepskorting mogelijk?
         </a>
       </h4>
     </div>
-    <div id="collapse2" class="panel-collapse collapse">
+    <div id="collapse3" class="panel-collapse collapse">
      <div class="panel-body">
         Wij kunnen heleaas geen korting geven op de prijs. Als u ons tijdig op de hoogte stelt van uw groepsgrootte doen wij uiteraard ons best om u een goede plek te geven waarbij u bij elkaar kunt zitten.
      </div>
@@ -48,12 +48,12 @@
     <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
             Is er een kinderhoek?
         </a>
       </h4>
     </div>
-    <div id="collapse2" class="panel-collapse collapse">
+    <div id="collapse4" class="panel-collapse collapse">
      <div class="panel-body">
         We beschikken niet over een kinderhoek in ons restaurant; wel zijn er kleurplaten en kleurtjes aanwezig voor onze kleine gasten.
      </div>
@@ -63,12 +63,12 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
             Zijn huisdieren toegestaan in het restaurant?
         </a>
       </h4>
     </div>
-    <div id="collapse3" class="panel-collapse collapse">
+    <div id="collapse5" class="panel-collapse collapse">
       <div class="panel-body">
        Wij vragen van u om geen hond of andere dieren mee te nemen. De ervaring heeft ons geleerd dat andere gasten niet altijd gecharmeerd zijn van dieren tijdens hun restaurantbezoek.
       </div>
