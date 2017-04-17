@@ -73,7 +73,7 @@ FOREIGN KEY(product_id)      	REFERENCES product(id)
 INSERT into productcategorie (naam)
 VALUES 	("Pizza's"),
 		("Pasta's"),
-		("Lasagne's"),
+		("Lasagnes"),
 		("Dranken");
 
 INSERT INTO product (naam, omschrijving, categorie_id, prijs,actief) VALUES
@@ -90,7 +90,7 @@ INSERT INTO product (naam, omschrijving, categorie_id, prijs,actief) VALUES
 ('Verde', 'pasta met pesto, spinazie, paprika, verse tomaat, kip en emmentaler kaas', 2, 950,1),
 ('Bianca', 'pasta met alfredosaus, champignons, gegrilde ham en emmentaler kaas', 2,900,1),
 ('Rossa', 'pasta met tomatensaus, champignons, rundergehakt en emmentaler kaas', 2, 1050,1),
-('Lasagne della casa', 'dunne pastabladen met room , bolognese saus ,mozzarella kaas en parmezaanse kaas', 3, 1250,1),
+('Lasagne della casa', 'dunne pastabladen met room, bolognese saus, mozzarella kaas en parmezaanse kaas', 3, 1250,1),
 ('Lasagne verde', 'dunne pastabladen met room, bladspinazie, ricotta, kaas, pijnboompitten en parmezaanse kaas af gegarneerd met walnoten', 3,1350,1),
 ('Canneloni di mamma', 'deegrolletjes gevuld met kalfsgehakt, ricotta kaas, pijnboompitten en rozijnen', 3,1475,1);
 
@@ -104,7 +104,7 @@ INSERT into user (emailadres,password,naam,autorisatie_id)
 VALUES 	("p.a.wesseling@st.hanze.nl","$2y$10$t3F2hQKtQfPbkXnYoDD.1ujnt8ZjVf7EgkxTlJQdPVD7ZePJfZSTq","Alexander",1),
 		("r.m.ten.klooster@st.hanze.nl","$2y$10$o9266kmjWhls.JFYUTaYuuL/.6frHMWf5RzGPRFcfSEruxn870TRS","Richard",1),
 		("s.e.j.kuiper@st.hanze.nl","$2y$10$MYmpheu8fKa8.v7zu1m7ZuSe10YJSO7nXH7ZE2N1ZdMBqNtR5tblS","Samuel",1),
-		("m.nieuwenweg@st.hanze.nl","$2y$10$xDlLTjHGubKVI21bQkXOtu90PU3tJIb8SvkVaNMPFZupwMdn2IHe.","Micheal",1),
+		("m.nieuwenweg@st.hanze.nl","$2y$10$xDlLTjHGubKVI21bQkXOtu90PU3tJIb8SvkVaNMPFZupwMdn2IHe.","Michael",1),
 		("t.a.van.der.linden@st.hanze.nl","$2y$10$/Cfc1jXVQJwZNBcZbjnv5eJqa/m/Vi8E6sVMyMWpSIXZajx/oQNsq","Thomas",1),
 		("kok@ziggo.nl","$2y$10$xDlLTjHGubKVI21bQkXOtu90PU3tJIb8SvkVaNMPFZupwMdn2IHe.","kok",2),
 		("boekhouder@ziggo.nl","$2y$10$xDlLTjHGubKVI21bQkXOtu90PU3tJIb8SvkVaNMPFZupwMdn2IHe.","boekhouder",2)

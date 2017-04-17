@@ -47,7 +47,7 @@
                   <div class="row">
                     <div class="container-fluid">
                       <form class="uitloggen" id="logout_formulier" method="POST" action="index.php">
-                        <button type="submit" id="login" class="btn btn-danger btn-sm pull-right" name="action" value="logout">Uitloggen</button>&nbsp;
+                        <button type="submit" id="login" class="btn btn-danger btn-sm pull-right" name="action" value="logout">Uitloggen</button>
                       </form>
                     </div>
                   </div>

@@ -42,6 +42,10 @@ body {
     width: 100%;
 }
 
+.input-group input {
+    max-width: 3em;
+}
+
 .red {
     color: red;
 }
