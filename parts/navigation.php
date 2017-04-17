@@ -37,18 +37,10 @@ if(isset($_GET['cat'])){
             <?php
           }
         };
-
-
-
-
-
-
             ?>
 
-
-
             <div class="btn-group btn-block">
-                <button type="button" class="btn btn-default btn-lg dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" id="wiezijnwij" class="btn btn-default btn-lg dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Wie wij zijn <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -58,7 +50,7 @@ if(isset($_GET['cat'])){
             </div>
 
             <div class="btn-group btn-block">
-                <button type="button" class="btn btn-default btn-lg dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" id="contact" class="btn btn-default btn-lg dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Contact <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
