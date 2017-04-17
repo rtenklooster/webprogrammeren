@@ -59,7 +59,7 @@ if(isset($_GET['cat'])){
                     <li><a href="?page=veelgesteldevragen">Veelgestelde vragen</a></li>
                 </ul>
             </div>
-            <a href="?page=afrekenen" class="btn btn-primary btn-lg btn-block" role="button" id="totaalBedrag">Winkelmandje: € 0,00
+            <a href="?page=afrekenen" class="btn btn-primary btn-lg btn-block" role="button" id="totaalBedrag"><span class="glyphicon glyphicon-shopping-cart"></span> Winkelmandje: € 0,00
             </a>
             <?php
                 if($_SESSION['logged_in']){

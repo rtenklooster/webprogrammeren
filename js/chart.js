@@ -11,7 +11,7 @@ function updateTotal(){
       data: "action=getTotal",
       success : function(text){
         // console.log(text);
-        $( "#totaalBedrag" ).text( "Winkelmandje: "+text);
+        $( "#totaalBedrag" ).html( "<span class='glyphicon glyphicon-shopping-cart'></span> Winkelmandje: "+text);
         $( "#totaalWinkelmandje strong" ).text(text);
       }
   });
