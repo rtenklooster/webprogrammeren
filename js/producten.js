@@ -57,11 +57,7 @@ $('.modal-footer .btn-primary').click(function() {
    $('form[name="modalForm"]').submit();
 });
 
-
-/////////////
-/*
-Please consider that the JS part isn't production ready at all, I just code it to show the concept of merging filters and titles together !
-*/
+// Filter
 $(document).ready(function(){
     $('.filterable .btn-filter').click(function(){
         var $panel = $(this).parents('.filterable'),
@@ -104,4 +100,3 @@ $(document).ready(function(){
         }
     });
 });
-////////////////////
