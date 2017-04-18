@@ -12,6 +12,8 @@ Haal de source code binnen in een map van de webserver:
 ```
 
 ## Zip bestand
+Download het [zip-bestand] (https://github.com/rtenklooster/webprogrammeren/archive/master.zip)
+
 Pak het zipbestand uit binnen een map van de webserver:
 
 ## Database
