@@ -11,9 +11,8 @@ if(!$_SESSION['logged_in']){
   <div class="panel panel-primary filterable">
     <div class="panel-heading">
         <h3 class="panel-title">Producten</h3>
-        <div class="pull-right">
-            <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
-        </div>
+        <button class="btn btn-default btn-xs btn-filter pull-right"><span class="glyphicon glyphicon-filter"></span>           Filter
+        </button>
     </div>
     <table class="table table-bordered table-striped">
         <thead>
