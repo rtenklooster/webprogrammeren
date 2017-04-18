@@ -8,11 +8,11 @@ Er zijn twee manieren om de site installeren:
 
 Haal de source code binnen in een map van de webserver:
 ```
-[] git clone https://github.com/rtenklooster/webprogrammeren.git
+git clone https://github.com/rtenklooster/webprogrammeren.git
 ```
 
 ## Zip bestand
-Download het [zip-bestand] (https://github.com/rtenklooster/webprogrammeren/archive/master.zip)
+Download het [zip-bestand](https://github.com/rtenklooster/webprogrammeren/archive/master.zip)
 
 Pak het zipbestand uit binnen een map van de webserver:
 
