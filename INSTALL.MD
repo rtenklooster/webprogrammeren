@@ -11,6 +11,12 @@ Haal de source code binnen in een map van de webserver:
 [] git clone https://github.com/rtenklooster/webprogrammeren.git
 ```
 
+## Zip bestand
+Pak het zipbestand uit binnen een map van de webserver:
+
+
+
+## Database
 Installeer de database:
 
 Navigeer naar de map waar de sourcecode gekloond is bv
@@ -31,7 +37,7 @@ mysql -u root -p
 CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON pizza . * TO 'newuser'@'localhost';
 ```
-Pas daarna de logingegevens van de database aan in
+Pas daarna de logingegevens van de database aan in het bestand
 ```
 functions/database.php
 ```
