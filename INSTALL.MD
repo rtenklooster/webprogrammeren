@@ -14,8 +14,6 @@ Haal de source code binnen in een map van de webserver:
 ## Zip bestand
 Pak het zipbestand uit binnen een map van de webserver:
 
-
-
 ## Database
 Installeer de database:
 
