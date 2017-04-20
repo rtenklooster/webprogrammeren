@@ -105,6 +105,7 @@ function getProductDetail($id){
 
   }
 }
+
 function convertPrice($input){
   // Zet prijs in centen om in nette prijs in euro's
 

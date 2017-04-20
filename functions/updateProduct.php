@@ -63,14 +63,17 @@ function updateProduct($id, $naam, $omschrijving, $categorie, $prijs){
     LIMIT 1';
 
     $stmt = $db->prepare($sql);
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    $stmt->bindParam(':naam', $naam, PDO::PARAM_STR);
+    // Escape chars
+    $naam         =   htmlspecialchars($naam);
+    $omschrijving =   htmlspecialchars($omschrijving);
+    $stmt->bindParam(':id',           $id, PDO::PARAM_INT);
+    $stmt->bindParam(':naam',         $naam, PDO::PARAM_STR);
     $stmt->bindParam(':omschrijving', $omschrijving, PDO::PARAM_STR);
-    $stmt->bindParam(':categorie', $categorie, PDO::PARAM_INT);
-    $stmt->bindParam(':prijs', $prijs, PDO::PARAM_INT);
+    $stmt->bindParam(':categorie',    $categorie, PDO::PARAM_INT);
+    $stmt->bindParam(':prijs',        $prijs, PDO::PARAM_INT);
     $stmt->execute();
 }
-
+2
 function wisProduct($id){
   GLOBAL $db;
   $sql = '
