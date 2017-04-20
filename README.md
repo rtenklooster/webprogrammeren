@@ -1,4 +1,6 @@
-# Installatie
+# Webprogrammeren 
+
+## Installatie
 
 Er zijn twee manieren om de site installeren:
 - Door middel van Git
