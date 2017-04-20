@@ -1,13 +1,13 @@
 <?php
 session_start();
-// Controleer of een gebruikers is ingelogd - of niet.
-// Login requests worden door de formhandler afgevangen.
 
+// Voeg producten toe aan het mandje.
+// Let op: data kan door bezoeker worden gemanipuleert, we gebruiken dus alleen het ID en de aantal. Slaan geen prijzen op in de mand.
 extract($_POST);
 
 function add_to_cart($id, $amount){
   $_SESSION['cart'][$id] = $amount;
-  echo "Gelukt: $id is $amount keer toegevoegd";
+  //echo "Gelukt: $id is $amount keer toegevoegd";
 }
 
 // Als er juiste input is, voeg dan toe aan de Session

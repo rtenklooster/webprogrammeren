@@ -1,9 +1,10 @@
 <?php
+// start Session
 session_start();
-// Controleer of een gebruikers is ingelogd - of niet.
-// Login requests worden door de formhandler afgevangen.
 
+// Extract de post
 extract($_POST);
+
 
 function delete_from_cart($id){
   unset($_SESSION['cart'][$id]);

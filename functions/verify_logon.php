@@ -16,7 +16,7 @@ function verify_logon($username, $password){
   // Mysql real escape strings zijn niet nodig omdat er gebruik wordt gemaakt van prepaired statements.
 
   // Haal de user op uit de database.
-  $user = getUser($username);
+  $user = getUser(htmlspecialchars($username));
 
   if(count($user)){
     // Er is een user gevonden met dit email adres
@@ -72,6 +72,6 @@ function getUser($email) {
       $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
       // Return het resultaat
       return($result);
-      print_r($result);
+      //print_r($result);
 }
  ?>

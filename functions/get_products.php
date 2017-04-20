@@ -27,9 +27,9 @@ function getProducts($cat, $start, $aantal){
       LIMIT :start, :aantal';
 
       $stmt = $db->prepare($sql);
-      $stmt->bindParam(':cat', $cat, PDO::PARAM_INT);
-      $stmt->bindParam(':start', $start, PDO::PARAM_INT);
-      $stmt->bindParam(':aantal', $aantal, PDO::PARAM_INT);
+      $stmt->bindParam(':cat',    $cat,     PDO::PARAM_INT);
+      $stmt->bindParam(':start',  $start,   PDO::PARAM_INT);
+      $stmt->bindParam(':aantal', $aantal,  PDO::PARAM_INT);
       $stmt->execute();
 
       $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -63,12 +63,12 @@ function getPrice($id){
       FROM product
       WHERE id = :id';
       $stmt = $db->prepare($sql);
-      $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+      $stmt->bindParam(':id',   $id,  PDO::PARAM_INT);
       $stmt->execute();
 
       $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
       return($result);
-      print_r($result);
+      //print_r($result);
     }
           catch(PDOException $e)
     {

@@ -7,14 +7,16 @@ extract($_POST);
 require_once('get_products.php');
 require_once('database.php');
 
+
 function get_cart_total(){
+//
   $totaal = 0;
   // Controleer of de cart gevuld is
   if(isset($_SESSION['cart'])){
   if(is_array($_SESSION['cart'])){
     foreach($_SESSION['cart'] AS $id => $amount){
       //echo "ID: $id aantal: $amount <br />";
-      $totaal += (getPrice($id)[0]['prijs'] * $amount);
+      $totaal += (getPrice(htmlspecialchars($id))[0]['prijs'] * $amount);
     }
   }
 }
@@ -34,8 +36,8 @@ function get_cart_detail(){
         // 3. Pizza Bolognese Small   1x    16,95   16,95   + - X
         // 4. Totaal:                 3x            41,95
         if($amount > 0){
-        $result[$i] = getProductDetail($id);
-        $result[$i]["aantal"]= $amount;
+        $result[$i] = getProductDetail(htmlspecialchars($id));
+        $result[$i]["aantal"]= htmlspecialchars($amount);
         $result[$i]["regelprijs"] = convertPrice($amount * $result[$i]["prijs"]);
         $result[$i]["id"] = $id;
         $i ++;
